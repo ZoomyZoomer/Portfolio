@@ -1,5 +1,6 @@
 html {
     height: 3000px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,6 +24,7 @@ a {
 
 .mainText {
     margin: 0;
+    margin-top: 200px;
     color: rgb(238, 238, 238);
     font-family: Lato, sans-serif;
     padding-top: 50px;
@@ -30,6 +32,8 @@ a {
     z-index: 1;
     display: grid;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainText > h1 {
@@ -41,13 +45,39 @@ a {
 .mainText > p {
     margin: 0;
     font-weight: 400;
-    padding-top: 20px;
+    padding-top: 40px;
     font-size: 16px;
-    color: rgb(221, 221, 221);
+    color: rgb(199, 199, 199);
 }
 
-.mainText > a {
-    content: "\f107";
+.mainText > div > a > svg {
+    margin-top: 120px;
+    transition: color 0.5s;
+    animation: bounce 1s infinite linear;
+    cursor: pointer;
+}
+
+.mainText > div > a > svg:hover {
+    color: white;
+    animation-play-state: paused;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+main{
+	margin-top: 128px;
 }
 
 /* ********Navbar******** */
@@ -55,6 +85,22 @@ a {
 .nav_wrapper {
     position: relative;
 }
+
+
+html:not([data-scroll='0']) .navflex {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: black;
+    height: 60px;
+}
+
+[data-scroll='0'] .navflex {
+    background-color: transparent;
+}
+
 
 .navleftflex > img, .navrightflex > img {
     height: 24px;
@@ -92,7 +138,7 @@ a {
 }
 
 .navrightflex {
-    padding-right: 50px;
+    padding-right: 60px;
 }
 
 .navleftflex, .navrightflex {
@@ -108,7 +154,7 @@ a {
 }
 
 .navrightflex > img {
-    padding-left: 20px;
+    padding-left: 30px;
     height: 20px;
     padding-top: 2px;
     cursor: pointer;
@@ -131,7 +177,7 @@ a {
 }
 
 .navrightflex > a {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 
@@ -139,19 +185,20 @@ a {
 
 
 .navflex {
-    height: 70px;
+    height: 80px;
     width: 100%;
     display: grid;
-    grid-template-columns: 250px 1fr 470px;
+    grid-template-columns: 250px 1fr 500px;
     align-items: center;
     background-color: transparent;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    transition: background-color 0.5s, height 0.5s;
 }
 
-.navleftflex:hover, .navAbout:hover, .navGoals:hover, .navProjects:hover, .navContact:hover  {
+.navleftflex:hover, #navAbout:hover, .navGoals:hover, .navProjects:hover, .navContact:hover  {
  opacity: 75%;
  cursor: pointer;
 }

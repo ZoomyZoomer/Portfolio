@@ -6,8 +6,10 @@ function App() {
   return (
 
     <div>
+      <a id="Home"></a>
       <Navbar />
       <MainContent />
+      <a id="About"></a>
 
     </div>
 
