@@ -1,0 +1,34 @@
+import React from 'react'
+
+function Navbar() {
+  return (
+
+        <div className="nav_wrapper">
+
+            <section className="navflex">
+                
+                <div className="navleftflex">
+                    <img src="icon.png"></img>
+                    <a> KAMIL WISNIEWSKI </a>
+                </div>
+
+                <div className="middleflex">
+
+                </div>
+
+                <div className="navrightflex">
+                    <a className="navAbout">ABOUT</a>
+                    <a className="navGoals">GOALS</a>
+                    <a className="navProjects">PROJECTS</a>
+                    <a className="navContact">CONTACT</a>
+                    <img src="info.png"></img>
+                </div>
+                
+            </section>
+
+        </div>
+
+  )
+}
+
+export default Navbar
