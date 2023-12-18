@@ -17,7 +17,7 @@ storeScroll();
 
   return (
 
-      <div className="main_container">
+      <section className="main_container">
 
             <div className="mainText">
               <h1>HI, I'M KAMIL</h1>
@@ -45,7 +45,7 @@ storeScroll();
           </div>
           
 
-      </div>
+      </section>
 
   )
 }

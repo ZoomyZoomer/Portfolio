@@ -1,6 +1,8 @@
 import React from 'react'
 import MainContent from './components/MainContent'
 import Navbar from './components/Navbar'
+import About from './components/About'
+import Goals from './components/Goals'
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Navbar />
       <MainContent />
       <a id="About"></a>
+      <About />
+      <Goals />
 
     </div>
 
