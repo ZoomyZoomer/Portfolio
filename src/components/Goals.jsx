@@ -3,15 +3,12 @@ import React from 'react'
 function Goals() {
   return (
     <section className="goalsWrapper">
-
-        <div className="goalsFlex">
-            <div className="circle"><a id="Goals"></a></div>
-            <div className="transparentCircle"></div>
-            <div className="circle"></div>
-
-        </div>
-        <div className="goalsFlexBottom">
-            <div className="circle"></div>
+      
+        <div className="goalsHeadingFlex"><p>What I'm looking to accomplish</p></div>
+        <div className="goalsImageFlex">
+          <div className="circle"><img src="present-icon.png"></img></div>
+          <div className="circle"><img src="present-icon.png"></img></div>
+          <div className="circle"><img src="present-icon.png"></img></div>
         </div>
 
     </section>
