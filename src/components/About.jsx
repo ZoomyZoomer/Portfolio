@@ -1,6 +1,28 @@
 import React from 'react'
 
 function About() {
+
+  const removePresent = () => {
+
+    var element = document.getElementById("present");
+
+      var ele = document.getElementById("present");
+      ele.classList.remove("present");
+      ele.classList.add("presentOpen");
+
+      setTimeout(letAnimate, 1000);
+
+        function letAnimate(){
+          element.parentNode.removeChild(element);
+          var element2 = document.getElementById("TLDR");
+          element2.classList.remove("transparent");
+        }
+
+
+
+
+  }
+
   return (
 
     <section className="aboutFlex">
@@ -19,7 +41,10 @@ function About() {
                 <br></br>
                 Apart from coding, I like playing strategy games and making digital art :&#41;
             </p>
-            <div className="TLDRcontainer">
+            <div className="presentContainer">
+              <img id="present" src="present-icon.png" className="present" onClick={removePresent}></img>
+            </div>
+            <div id="TLDR" className={'TLDRcontainer' + ' ' + 'transparent'}>
               <p>TL;DR?</p>
               <div className="TLDRflex">
                   <div>

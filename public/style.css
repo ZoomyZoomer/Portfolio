@@ -198,7 +198,7 @@ html:not([data-scroll='0']) .navflex {
     transition: background-color 0.5s, height 0.5s;
 }
 
-.navleftflex:hover, #navAbout:hover, .navGoals:hover, .navProjects:hover, .navContact:hover  {
+.navleftflex:hover, #navAbout:hover, #navGoals:hover, #navProjects:hover, #navContact:hover  {
  opacity: 75%;
  cursor: pointer;
 }
@@ -295,13 +295,14 @@ html:not([data-scroll='0']) .navflex {
     display: grid;
     background-color: rgb(238, 238, 238);
     border-radius: 10%;
+    transition: opacity 0.75s;
 }
 
 .TLDRcontainer > p{
     font-family: lato;
     font-weight: 300;
     font-size: 22px;
-    color: #333;
+    color: #525252;
     padding-top: 20px;
     grid-template-columns: 1fr;
 }
@@ -330,37 +331,84 @@ html:not([data-scroll='0']) .navflex {
     width: 100%;
     height: 600px;
     background-color: rgb(238, 238, 238);
-    display: grid;
-    justify-content: center;
-    align-items: center;
 }
 
 .goalsHeadingFlex {
     display: flex;
     height: auto;
     width: 100%;
-    text-align: center;
     justify-content: center;
+}
+
+.goalsHeadingFlex > p {
+    margin-top: 50px;
+    margin-bottom: -50px;
+    font-family: Lato, sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: #333333;
 }
 
 .goalsImageFlex {
+    margin-top: 125px;
     display: flex;
-    width: 100%;
+    width: auto;
     height: 200px;
-}
-
-.circle {
-    background-color: rgb(38, 95, 170);
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    display: flex;
-    object-fit: contain;
     justify-content: center;
-    align-items: center;
 }
 
-.circle > img{
-    height: 80px;
-    width: 80px;  
+.present {
+    height: 70px;
+    width: 70px;
+    padding-top: 20px;
+    animation: present 1.5s infinite ease-in-out;
+}
+
+@keyframes present {
+    20%{
+        transform: rotate(20deg);
+    }
+    40%{
+        transform: rotate(-20deg);
+    }
+    60%{
+        transform: rotate(20deg);
+    }
+    80%{
+        transform: rotate(-20deg);
+    }
+}
+
+.presentOpen {
+    height: 70px;
+    width: 70px;
+    padding-top: 20px;
+    animation: presentOpen 1s 1 ease-in;
+}
+
+@keyframes presentOpen {
+    20%{
+        transform: rotate(30deg);
+    }
+    40%{
+        transform: rotate(-30deg);
+    }
+    60%{
+        transform: rotate(30deg);
+    }
+    80%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+.present:hover {
+    cursor: pointer;
+}
+
+.transparent {
+    opacity: 0;
 }
