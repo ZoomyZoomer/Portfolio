@@ -14,7 +14,9 @@ function App() {
       <MainContent />
       <a id="About"></a>
       <About />
+      <a id="Goals"></a>
       <Goals />
+      <a id="Experience"></a>
       <Experience />
 
     </div>

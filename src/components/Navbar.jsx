@@ -22,8 +22,8 @@ function Navbar() {
                 <div className="navrightflex">
                     <a id="navAbout" href="#About">ABOUT</a>
                     <a id="navGoals" href="#Goals">GOALS</a>
-                    <a id="navProjects" className="navProjects">EXPERIENCE</a>
-                    <a id="navContact" className="navContact">PROJECTS</a>
+                    <a id="navExperience" href="#Experience">EXPERIENCE</a>
+                    <a id="navProjects" href="#Projects">PROJECTS</a>
                     <img src="info.png"></img>
                 </div>
                 
