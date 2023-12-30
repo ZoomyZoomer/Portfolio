@@ -1,5 +1,5 @@
 html {
-    height: 3000px;
+    height: 4000px;
     scroll-behavior: smooth;
 }
 
@@ -329,32 +329,69 @@ html:not([data-scroll='0']) .navflex {
 
 .goalsWrapper {
     width: 100%;
-    height: 600px;
+    height: 700px;
     background-color: rgb(238, 238, 238);
 }
 
 .goalsHeadingFlex {
+    padding-top: 50px;
     display: flex;
     height: auto;
     width: 100%;
     justify-content: center;
-}
+    text-align: center;
+  }
 
-.goalsHeadingFlex > p {
-    margin-top: 50px;
-    margin-bottom: -50px;
+  .goalsHeadingFlex > p {
+    /* Remove padding-top: 100px; and margin-bottom: -70px; */
     font-family: Lato, sans-serif;
     font-size: 36px;
     font-weight: 300;
     color: #333333;
-}
+    padding-top: 50px;
+    letter-spacing: 1px;
+  }
 
-.goalsImageFlex {
-    margin-top: 125px;
+  .goalsImageFlex {
+    margin-top: 80px;
     display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     width: auto;
     height: 200px;
+}
+
+.goalsSection {
+    display: flex;
+    height: auto;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #bbcbd1;
+    margin: 0 180px; /* Add some margin between circles if needed */
+}
+
+.circle > img {
+    height: 60px;
+    width: 60px;
+}
+
+.circle > img:hover {
+    animation: spin 1s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.goalsSection > h4 {
+    margin-bottom: 30px;
 }
 
 .present {
@@ -411,4 +448,594 @@ html:not([data-scroll='0']) .navflex {
 
 .transparent {
     opacity: 0;
+}
+
+.goalsCircle {
+    width: 200vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.goalsTitle {
+    width: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.goalsTitle > div {
+    margin: 0 200px;
+    margin-top: 20px;
+    width: 160px;
+    height: auto;
+}
+
+.goalsTitle > div > h4 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.wrap {
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.desc {
+    display: flex;
+    text-align: center;
+}
+
+.desc > desc {
+    font-family: Roboto Slab, sans-serif;
+    margin: 0 30px;
+    width: 500px;
+    line-height: 26px;
+}
+
+/* EXPERIENCE */
+
+.expContainer {
+    width: auto;
+    height: 800px;
+}
+
+.expHeadingGrid {
+    display: grid;
+    height: 200px;
+    width: auto;
+}
+
+.expHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.expHeader > h1 {
+    margin-top: 40px;
+    padding-top: 60px;
+    font-weight: 300;
+    font-size: 30px;
+
+}
+
+.expHeader > p {
+    font-weight: 300;
+    font-size: 16px;
+    font-family: Roboto Slab, sans-serif;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.sliderGrid {
+    margin-top: 100px;
+    position: absolute;
+    left: 100px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.sliderGrid > div > button {
+    height: 15px;
+    width: 10px;
+    border-width: 1px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.sliderGrid > div > button:hover {
+    background-color: #a4cddb;
+}
+
+.sliderGrid > div > p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.sliderRelative {
+    position: relative;
+}
+
+.display {
+    position: relative;
+    width: 900px;
+    height: 500px;
+}
+
+.display > div {
+    border-radius: 50%;
+    position: absolute;
+    background-color: #cfe2e9;
+}
+
+
+
+.circle1{
+    left: 150px;
+    bottom: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.circle1Anim {
+    left: 125px;
+    bottom: 260px;
+    height: 100px;
+    width: 100px;
+    animation: moveCircle1 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle1 {
+    0%{
+        left: 125px;
+        bottom: 260px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        left: 150px;
+        bottom: 100px;
+    }
+}
+
+.circle1-1Anim{
+    left: 150px;
+    bottom: 100px;
+    height: 100px;
+    width: 100px;
+    animation: moveCircle1-1 1s 1 ease-in-out;
+}
+
+.circle1-1{
+    left: 250px;
+    bottom: 150px;
+    height: 100px;
+    width: 100px;
+} 
+
+.circle1-2Anim {
+    left: 250px;
+    bottom: 150px;
+    height: 100px;
+    width: 100px;
+    animation: moveCircle1-2 1s 1 ease-in-out;
+}
+
+.circle1-2{
+    left: 125px;
+    bottom: 260px;
+    height: 100px;
+    width: 100px;
+}
+
+@keyframes moveCircle1-2 {
+    0%{
+        left: 250px;
+        bottom: 150px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        left: 125px;
+        bottom: 260px;
+    }
+}
+
+@keyframes moveCircle1-1 {
+    0%{
+        left: 150px;
+        bottom: 100px;
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        left: 250px;
+        bottom: 150px;
+        opacity: 1;
+    }
+}
+
+.circle2{
+    right: 100px;
+    top: 50px;
+    height: 160px;
+    width: 160px;
+}
+
+.circle2Anim{
+    right: 145px;
+    top: 170px;
+    height: 160px;
+    width: 160px;
+    animation: moveCircle2 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle2 {
+    0%{
+        right: 145px;
+        top: 170px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        right: 100px;
+        top: 50px;
+    }
+}
+
+.circle2-1Anim{
+    right: 100px;
+    top: 50px;
+    height: 160px;
+    width: 160px;
+    animation: moveCircle2-1 1s 1 ease-in-out;
+}
+
+.circle2-2{
+    right: 145px;
+    top: 170px;
+    height: 160px;
+    width: 160px;
+}
+
+.circle2-2Anim{
+    right: 50px;
+    top: 275px;
+    height: 160px;
+    width: 160px;
+    animation: moveCircle2-2 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle2-2 {
+    0%{
+        right: 50px;
+        top: 275px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        right: 145px;
+        top: 170px;
+    }
+}
+
+@keyframes moveCircle2-1 {
+    0%{
+        right: 100px;
+        top: 50px;
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        right: 50px;
+        top: 275px;
+        opacity: 1;
+    }
+}
+
+.circle2-1{
+    right: 50px;
+    top: 275px;
+    height: 160px;
+    width: 160px;
+}
+
+.circle3{
+    right: 240px;
+    top: 0;
+    height: 180px;
+    width: 180px;
+}
+
+.circle3Anim{
+    right: 80px;
+    top: 10px;
+    height: 180px;
+    width: 180px;
+    animation: moveCircle3 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle3 {
+    0%{
+        right: 80px;
+        top: 10px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        right: 240px;
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.circle3-2{
+    right: 80px;
+    top: 10px;
+    height: 180px;
+    width: 180px;
+}
+
+.circle3-2Anim{
+    height: 180px;
+    width: 180px;
+    right: 340px;
+    top: 10px;
+    animation: moveCircle3-2 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle3-2 {
+    0%{
+        right: 340px;
+        top: 40px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        right: 80px;
+        top: 10px;
+        
+    }
+
+    
+}
+
+
+.circle3-1Anim{
+    right: 240px;
+    height: 180px;
+    width: 180px;
+    animation: moveCircle3-1 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle3-1 {
+    0%{
+        top: 0;
+        right: 240px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        top: 40px;
+        right: 340px;
+        opacity: 1;
+    }
+}
+
+.circle3-1{
+    height: 180px;
+    width: 180px;
+    right: 340px;
+    top: 40px;
+}
+
+.circle4{
+    right: 340px;
+    bottom: 40px;
+    height: 170px;
+    width: 170px;
+}
+
+.circle4Anim{
+    right: 355px;
+    bottom: 110px;
+    height: 170px;
+    width: 170px;
+    animation: moveCircle4 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle4 {
+    0%{
+        right: 355px;
+        bottom: 110px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        right: 340px;
+        bottom: 40px;
+        opacity: 1;
+    }
+}
+
+.circle4-2{
+    right: 355px;
+    bottom: 110px;
+    height: 170px;
+    width: 170px;
+}
+
+.circle4-2Anim{
+    right: 270px;
+    bottom: 150px;
+    height: 170px;
+    width: 170px;
+    animation: moveCircle4-2 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle4-2 {
+    0%{
+        right: 270px;
+        bottom: 150px;
+        opacity: 1; 
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        right: 355px;
+        bottom: 110px;
+    }
+}
+
+.circle4-1Anim{
+    right: 340px;
+    bottom: 40px;
+    height: 170px;
+    width: 170px;
+    animation: moveCircle4-1 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle4-1 {
+    0%{
+        right: 340px;
+        bottom: 40px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        right: 270px;
+        bottom: 150px;
+        opacity: 1;
+    }
+}
+
+.circle4-1{
+    right: 270px;
+    bottom: 150px;
+    height: 170px;
+    width: 170px;
+}
+
+.circle5{
+    top: 40px;
+    left: 30px;
+    height: 200px;
+    width: 200px;
+}
+
+.circle5Anim{
+    top: 45px;
+    left: 170px;
+    height: 200px;
+    width: 200px;
+    animation: moveCircle5 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle5 {
+    0%{
+        top: 45px;
+        left: 170px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        top: 40px;
+        left: 30px;
+        opacity: 1;
+    }
+}
+
+.circle5-2{
+    top: 45px;
+    left: 170px;
+    height: 200px;
+    width: 200px;
+}
+
+.circle5-2Anim{
+    top: 250px;
+    left: 60px;
+    height: 200px;
+    width: 200px;
+    animation: moveCircle5-2 1s 1 ease-in-out;
+}
+
+@keyframes moveCircle5-2 {
+    0%{
+        top: 250px;
+        left: 60px;
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100%{
+        top: 45px;
+        left: 170px;
+        opacity: 1;
+    }
+}
+
+.circle5-1Anim{
+    top: 40px;
+    left: 30px;
+    height: 200px;
+    width: 200px;
+    animation: moveCircle5-1 1s 1 ease-in-out;
+}
+
+.circle5-1{
+    top: 250px;
+    left: 60px;
+    height: 200px;
+    width: 200px;
+}
+
+@keyframes moveCircle5-1 {
+    0%{
+        top: 40px;
+        left: 30px;
+        opacity: 1
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        top: 250px;
+        left: 60px;
+        opacity: 1;
+    }
 }
