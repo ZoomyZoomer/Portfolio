@@ -546,9 +546,41 @@ html:not([data-scroll='0']) .navflex {
 .sliderGrid > div > button {
     height: 15px;
     width: 10px;
-    border-width: 1px;
+    border-width: 0;
     border-radius: 50%;
     margin: 0 2px;
+    background-color: #d8d8d8;
+}
+
+.sliderGrid > div {
+    position: relative;
+}
+
+#rightArrow {
+    position: absolute;
+    top: -9px;
+    right: 270px;
+    cursor: pointer;
+    animation: caretBounce 1s infinite linear;
+}
+
+@keyframes caretBounce{
+    25%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.inactive {
+    pointer-events: none;
 }
 
 .sliderGrid > div > button:hover {
@@ -558,6 +590,7 @@ html:not([data-scroll='0']) .navflex {
 .sliderGrid > div > p {
     font-size: 20px;
     font-weight: 300;
+    margin-bottom: 50px;
 }
 
 .sliderRelative {
@@ -583,6 +616,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 100px;
     height: 100px;
     width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle1Anim {
@@ -590,6 +626,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 260px;
     height: 100px;
     width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle1 1s 1 ease-in-out;
 }
 
@@ -613,6 +652,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 100px;
     height: 100px;
     width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle1-1 1s 1 ease-in-out;
 }
 
@@ -621,6 +663,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 150px;
     height: 100px;
     width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 .circle1-2Anim {
@@ -628,6 +673,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 150px;
     height: 100px;
     width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle1-2 1s 1 ease-in-out;
 }
 
@@ -636,6 +684,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 260px;
     height: 100px;
     width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes moveCircle1-2 {
@@ -660,7 +711,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: 0.7;
+        opacity: 0.5;
     }
     100%{
         left: 250px;
@@ -674,6 +725,9 @@ html:not([data-scroll='0']) .navflex {
     top: 50px;
     height: 160px;
     width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle2Anim{
@@ -681,6 +735,9 @@ html:not([data-scroll='0']) .navflex {
     top: 170px;
     height: 160px;
     width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle2 1s 1 ease-in-out;
 }
 
@@ -691,7 +748,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         right: 100px;
@@ -704,6 +761,9 @@ html:not([data-scroll='0']) .navflex {
     top: 50px;
     height: 160px;
     width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle2-1 1s 1 ease-in-out;
 }
 
@@ -712,6 +772,9 @@ html:not([data-scroll='0']) .navflex {
     top: 170px;
     height: 160px;
     width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle2-2Anim{
@@ -719,6 +782,9 @@ html:not([data-scroll='0']) .navflex {
     top: 275px;
     height: 160px;
     width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle2-2 1s 1 ease-in-out;
 }
 
@@ -729,7 +795,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         right: 145px;
@@ -744,7 +810,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: 0.7;
+        opacity: 0.5;
     }
     100%{
         right: 50px;
@@ -758,6 +824,9 @@ html:not([data-scroll='0']) .navflex {
     top: 275px;
     height: 160px;
     width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle3{
@@ -765,6 +834,9 @@ html:not([data-scroll='0']) .navflex {
     top: 0;
     height: 180px;
     width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle3Anim{
@@ -772,6 +844,9 @@ html:not([data-scroll='0']) .navflex {
     top: 10px;
     height: 180px;
     width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle3 1s 1 ease-in-out;
 }
 
@@ -782,7 +857,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         right: 240px;
@@ -796,6 +871,9 @@ html:not([data-scroll='0']) .navflex {
     top: 10px;
     height: 180px;
     width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle3-2Anim{
@@ -803,6 +881,9 @@ html:not([data-scroll='0']) .navflex {
     width: 180px;
     right: 340px;
     top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle3-2 1s 1 ease-in-out;
 }
 
@@ -813,7 +894,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         right: 80px;
@@ -829,6 +910,9 @@ html:not([data-scroll='0']) .navflex {
     right: 240px;
     height: 180px;
     width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle3-1 1s 1 ease-in-out;
 }
 
@@ -839,7 +923,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         top: 40px;
@@ -853,6 +937,9 @@ html:not([data-scroll='0']) .navflex {
     width: 180px;
     right: 340px;
     top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle4{
@@ -860,6 +947,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 40px;
     height: 170px;
     width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle4Anim{
@@ -867,6 +957,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 110px;
     height: 170px;
     width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle4 1s 1 ease-in-out;
 }
 
@@ -877,7 +970,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         right: 340px;
@@ -891,6 +984,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 110px;
     height: 170px;
     width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle4-2Anim{
@@ -898,6 +994,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 150px;
     height: 170px;
     width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle4-2 1s 1 ease-in-out;
 }
 
@@ -908,7 +1007,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1; 
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         right: 355px;
@@ -921,6 +1020,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 40px;
     height: 170px;
     width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle4-1 1s 1 ease-in-out;
 }
 
@@ -931,7 +1033,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         right: 270px;
@@ -945,6 +1047,9 @@ html:not([data-scroll='0']) .navflex {
     bottom: 150px;
     height: 170px;
     width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle5{
@@ -952,6 +1057,9 @@ html:not([data-scroll='0']) .navflex {
     left: 30px;
     height: 200px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle5Anim{
@@ -959,6 +1067,9 @@ html:not([data-scroll='0']) .navflex {
     left: 170px;
     height: 200px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle5 1s 1 ease-in-out;
 }
 
@@ -969,7 +1080,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         top: 40px;
@@ -983,6 +1094,9 @@ html:not([data-scroll='0']) .navflex {
     left: 170px;
     height: 200px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle5-2Anim{
@@ -990,6 +1104,9 @@ html:not([data-scroll='0']) .navflex {
     left: 60px;
     height: 200px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle5-2 1s 1 ease-in-out;
 }
 
@@ -1000,7 +1117,7 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1;
     }
     50%{
-        opacity: .7;
+        opacity: .5;
     }
     100%{
         top: 45px;
@@ -1014,6 +1131,9 @@ html:not([data-scroll='0']) .navflex {
     left: 30px;
     height: 200px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: moveCircle5-1 1s 1 ease-in-out;
 }
 
@@ -1022,6 +1142,9 @@ html:not([data-scroll='0']) .navflex {
     left: 60px;
     height: 200px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes moveCircle5-1 {
@@ -1031,11 +1154,116 @@ html:not([data-scroll='0']) .navflex {
         opacity: 1
     }
     50%{
-        opacity: 0.7;
+        opacity: 0.5;
     }
     100%{
         top: 250px;
         left: 60px;
         opacity: 1;
     }
+}
+
+#circle5Image{
+    z-index: 1;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+    transition: filter .6s;
+}
+
+#circle5Image:hover{
+    transition: height 0.7s, width 0.7s;
+    height: 140px;
+    width: 140px;
+}
+
+#circle3Image{
+    z-index: 1;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+    transition: filter .6s;
+}
+
+#circle3Image:hover{
+    transition: height 0.7s, width 0.7s;
+    height: 140px;
+    width: 140px;
+}
+
+#circle2Image{
+    z-index: 1;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    transition: filter .6s;
+}
+
+#circle2Image:hover{
+    transition: height 0.7s, width 0.7s;
+    height: 120px;
+    width: 120px;
+}
+
+#circle1Image{
+    z-index: 1;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    transition: filter .6s;
+}
+
+#circle1Image:hover{
+    transition: height 0.7s, width 0.7s;
+    height: 70px;
+    width: 70px;
+}
+
+#circle4Image{
+    z-index: 1;
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
+    transition: filter .6s;
+}
+
+#circle4Image:hover{
+    transition: height 0.7s, width 0.7s;
+    height: 110px;
+    width: 110px;
+}
+
+.grayscale{
+    filter: grayscale(100%);
+}
+
+.grayscale:hover{
+    filter: grayscale(0%);
+}
+
+.fadeImage {
+    animation: fadeImage 1s 1 linear;
+}
+
+@keyframes fadeImage {
+    0%{
+        opacity: .7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.griddy{
+    position: relative;
+}
+
+.border{
+    position: absolute;
+    height: 400px;
+    width: 5px;
+    background-color: #5c5c5c;
+    border-radius: 20%;
+    top: 20px;
+    right: 0;
 }

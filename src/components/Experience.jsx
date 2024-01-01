@@ -1,10 +1,33 @@
 import React, {useState} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 function Experience() {
 
-    const [text, setText] = useState("PROGRAMMING LANGUAGES");
+    
+
+    const [text, setText] = useState("LANGUAGES");
 
     const [slide, setSlide] = useState(0);
+
+    
+
+
+    function recolor(e) {
+        document.getElementById(e.target.id).classList.remove("grayscale");
+    }
+
+    var child1 = React.createElement("img", {id:"circle1Image", className:"grayscale", src:"html_logo.png"});
+    var child2 = React.createElement("img", {id:"circle2Image", className:"grayscale", src:"javascript_logo.png"});
+    var child3 = React.createElement("img", {id:"circle3Image", className:"grayscale", src:"c_logo.png"});
+    var child4 = React.createElement("img", {id:"circle4Image", className:"grayscale", src:"css_logo.png"});
+    var child5 = React.createElement("img", {id:"circle5Image", className:"grayscale", src:"java_logo.png"});
+
+    const [img1, setImg1] = useState(child1);
+    const [img2, setImg2] = useState(child2);
+    const [img3, setImg3] = useState(child3);
+    const [img4, setImg4] = useState(child4);
+    const [img5, setImg5] = useState(child5);
 
 
     function nextSlide() {
@@ -15,10 +38,16 @@ function Experience() {
         var circle3 = document.getElementById("c3");
         var circle4 = document.getElementById("c4");
         var circle5 = document.getElementById("c5");
+    
 
         switch(slide){
             case 0:
-                setText(prevText => "LIBRARIES");
+                setText(prevText => "SYSTEMS AND LIBRARIES");
+                setImg1(prevImg1 => React.createElement("img", {id:"circle1Image", className:"grayscale fadeImage", src:"babylon_icon.png"}));
+                setImg2(prevImg2 => React.createElement("img", {id:"circle2Image", className:"grayscale fadeImage", src:"linux_icon.png"}));
+                setImg3(prevImg3 => React.createElement("img", {id:"circle3Image", className:"grayscale fadeImage", src:"fontawesome_icon.png"}));
+                setImg4(prevImg4 => React.createElement("img", {id:"circle4Image", className:"grayscale fadeImage", src:"jquery_icon.png"}));
+                setImg5(prevImg5 => React.createElement("img", {id:"circle5Image", className:"grayscale fadeImage", src:"React_icon.png"}));
                 circle1.classList.remove("circle1");
                 circle1.classList.add("circle1-1Anim");
                 circle2.classList.remove("circle2");
@@ -29,6 +58,7 @@ function Experience() {
                 circle4.classList.add("circle4-1Anim");
                 circle5.classList.remove("circle5");
                 circle5.classList.add("circle5-1Anim");
+                document.getElementById("rightArrow").classList.add("inactive");
 
 
                 setTimeout(letAnimate1, 999);
@@ -46,10 +76,16 @@ function Experience() {
                     circle4.classList.add("circle4-1");
                     circle5.classList.remove("circle5-1Anim");
                     circle5.classList.add("circle5-1");
+                    document.getElementById("rightArrow").classList.remove("inactive");
                 }
                 break;
             case 1:
-                setText(prevText => "IDEs");
+                setText(prevText => "SOFTWARE AND APPLICATIONS");
+                setImg1(prevImg1 => React.createElement("img", {id:"circle1Image", className:"grayscale fadeImage", src:"photoshop_icon.png"}));
+                setImg2(prevImg2 => React.createElement("img", {id:"circle2Image", className:"grayscale fadeImage", src:"github_icon.png"}));
+                setImg3(prevImg3 => React.createElement("img", {id:"circle3Image", className:"grayscale fadeImage", src:"eclipse_icon.png"}));
+                setImg4(prevImg4 => React.createElement("img", {id:"circle4Image", className:"grayscale fadeImage", src:"clipstudiopaint_icon.png"}));
+                setImg5(prevImg5 => React.createElement("img", {id:"circle5Image", className:"grayscale fadeImage", src:"visualstudio_icon.png"}));
                 circle1.classList.remove("circle1-1");
                 circle1.classList.add("circle1-2Anim");
                 circle2.classList.remove("circle2-1");
@@ -60,6 +96,7 @@ function Experience() {
                 circle4.classList.add("circle4-2Anim");
                 circle5.classList.remove("circle5-1");
                 circle5.classList.add("circle5-2Anim");
+                document.getElementById("rightArrow").classList.add("inactive");
 
                 setTimeout(letAnimate2, 999);
 
@@ -74,10 +111,16 @@ function Experience() {
                     circle4.classList.add("circle4-2");
                     circle5.classList.remove("circle5-2Anim");
                     circle5.classList.add("circle5-2");
+                    document.getElementById("rightArrow").classList.remove("inactive");
                 }
                 break;
             case 2:
-                setText(prevText => "PROGRAMMING LANGUAGES");
+                setText(prevText => "LANGUAGES");
+                setImg1(prevImg1 => React.createElement("img", {id:"circle1Image", className:"grayscale", src:"html_logo.png"}));
+                setImg2(prevImg2 => React.createElement("img", {id:"circle2Image", className:"grayscale", src:"javascript_logo.png"}));
+                setImg3(prevImg3 => React.createElement("img", {id:"circle3Image", className:"grayscale", src:"c_logo.png"}));
+                setImg4(prevImg4 => React.createElement("img", {id:"circle4Image", className:"grayscale", src:"css_logo.png"}));
+                setImg5(prevImg5 => React.createElement("img", {id:"circle5Image", className:"grayscale", src:"java_logo.png"}));
                 circle1.classList.remove("circle1-2");
                 circle1.classList.add("circle1Anim");
                 circle2.classList.remove("circle2-2");
@@ -88,6 +131,7 @@ function Experience() {
                 circle4.classList.add("circle4Anim");
                 circle5.classList.remove("circle5-2");
                 circle5.classList.add("circle5Anim");
+                document.getElementById("rightArrow").classList.add("inactive");
 
                 setTimeout(letAnimate3, 999);
 
@@ -102,9 +146,9 @@ function Experience() {
                     circle4.classList.add("circle4");
                     circle5.classList.remove("circle5Anim");
                     circle5.classList.add("circle5");   
+                    document.getElementById("rightArrow").classList.remove("inactive");
                 }
                 break;
-                
 
             
         }
@@ -125,19 +169,20 @@ function Experience() {
             <div className="sliderGrid">
                 <div>
                     <p>{text}</p>
-                    <button id="b1" onClick={() => nextSlide()}></button>
-                    <button id="b2" onClick={() => nextSlide()}></button>
-                    <button id="b3" onClick={() => nextSlide()}></button>
+                    <FontAwesomeIcon id="rightArrow" onClick={() => nextSlide()} icon={faCaretRight} size = '3x' color = 'rgb(30, 48, 80)'/>
                 </div>
 
-
-                <div className="display">
-                    <div id="c1" className="circle1"></div>
-                    <div id="c2" className="circle2"></div>
-                    <div id="c3" className="circle3"></div>
-                    <div id="c4" className="circle4"></div>
-                    <div id="c5" className="circle5"></div>
+                <div className="griddy">
+                    <div className="display">
+                        {React.createElement("div", {className: "circle1", id: "c1"}, img1)}
+                        {React.createElement("div", {className: "circle2", id: "c2"}, img2)}
+                        {React.createElement("div", {className: "circle3", id: "c3"}, img3)}
+                        {React.createElement("div", {className: "circle4", id: "c4"}, img4)}
+                        {React.createElement("div", {className: "circle5", id: "c5"}, img5)}
+                    </div>
+                    <div className="border"></div>
                 </div>
+                
 
             </div>
         </div>
