@@ -8,6 +8,8 @@ function Experience() {
 
     const [text, setText] = useState("LANGUAGES");
 
+    const [text2, setText2] = useState("COLLEGE COURSES");
+
     const [slide, setSlide] = useState(0);
 
     
@@ -17,17 +19,21 @@ function Experience() {
         document.getElementById(e.target.id).classList.remove("grayscale");
     }
 
-    var child1 = React.createElement("img", {id:"circle1Image", className:"grayscale", src:"html_logo.png"});
-    var child2 = React.createElement("img", {id:"circle2Image", className:"grayscale", src:"javascript_logo.png"});
-    var child3 = React.createElement("img", {id:"circle3Image", className:"grayscale", src:"c_logo.png"});
-    var child4 = React.createElement("img", {id:"circle4Image", className:"grayscale", src:"css_logo.png"});
-    var child5 = React.createElement("img", {id:"circle5Image", className:"grayscale", src:"java_logo.png"});
+    var child1 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/HTML"}, React.createElement("img", {id:"circle1Image", className:"grayscale", src:"html_logo.png"}));
+    var child2 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/JavaScript"}, React.createElement("img", {id:"circle2Image", className:"grayscale", src:"javascript_logo.png"}));
+    var child3 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/C_(programming_language)"}, React.createElement("img", {id:"circle3Image", className:"grayscale", src:"c_logo.png"}));
+    var child4 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/CSS"}, React.createElement("img", {id:"circle4Image", className:"grayscale", src:"css_logo.png"}));
+    var child5 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/Java_(programming_language)"}, React.createElement("img", {id:"circle5Image", className:"grayscale", src:"java_logo.png"}));
 
     const [img1, setImg1] = useState(child1);
     const [img2, setImg2] = useState(child2);
     const [img3, setImg3] = useState(child3);
     const [img4, setImg4] = useState(child4);
     const [img5, setImg5] = useState(child5);
+
+    function nextSlide2(){
+
+    }
 
 
     function nextSlide() {
@@ -43,11 +49,11 @@ function Experience() {
         switch(slide){
             case 0:
                 setText(prevText => "SYSTEMS AND LIBRARIES");
-                setImg1(prevImg1 => React.createElement("img", {id:"circle1Image", className:"grayscale fadeImage", src:"babylon_icon.png"}));
-                setImg2(prevImg2 => React.createElement("img", {id:"circle2Image", className:"grayscale fadeImage", src:"linux_icon.png"}));
-                setImg3(prevImg3 => React.createElement("img", {id:"circle3Image", className:"grayscale fadeImage", src:"fontawesome_icon.png"}));
-                setImg4(prevImg4 => React.createElement("img", {id:"circle4Image", className:"grayscale fadeImage", src:"jquery_icon.png"}));
-                setImg5(prevImg5 => React.createElement("img", {id:"circle5Image", className:"grayscale fadeImage", src:"React_icon.png"}));
+                setImg1(prevImg1 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/Babylon.js"}, React.createElement("img", {id:"circle1Image", className:"grayscale fadeImage", src:"babylon_icon.png"})));
+                setImg2(prevImg2 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/Linux"}, React.createElement("img", {id:"circle2Image", className:"grayscale fadeImage", src:"linux_icon.png"})));
+                setImg3(prevImg3 => React.createElement("a", {href: "https://fontawesome.com/"}, React.createElement("img", {id:"circle3Image", className:"grayscale fadeImage", src:"fontawesome_icon.png"})));
+                setImg4(prevImg4 => React.createElement("a", {href: "https://jquery.com/"}, React.createElement("img", {id:"circle4Image", className:"grayscale fadeImage", src:"jquery_icon.png"})));
+                setImg5(prevImg5 => React.createElement("a", {href: "https://react.dev/"}, React.createElement("img", {id:"circle5Image", className:"grayscale fadeImage", src:"React_icon.png"})));
                 circle1.classList.remove("circle1");
                 circle1.classList.add("circle1-1Anim");
                 circle2.classList.remove("circle2");
@@ -81,11 +87,11 @@ function Experience() {
                 break;
             case 1:
                 setText(prevText => "SOFTWARE AND APPLICATIONS");
-                setImg1(prevImg1 => React.createElement("img", {id:"circle1Image", className:"grayscale fadeImage", src:"photoshop_icon.png"}));
-                setImg2(prevImg2 => React.createElement("img", {id:"circle2Image", className:"grayscale fadeImage", src:"github_icon.png"}));
-                setImg3(prevImg3 => React.createElement("img", {id:"circle3Image", className:"grayscale fadeImage", src:"eclipse_icon.png"}));
-                setImg4(prevImg4 => React.createElement("img", {id:"circle4Image", className:"grayscale fadeImage", src:"clipstudiopaint_icon.png"}));
-                setImg5(prevImg5 => React.createElement("img", {id:"circle5Image", className:"grayscale fadeImage", src:"visualstudio_icon.png"}));
+                setImg1(prevImg1 => React.createElement("a", {href: "https://www.adobe.com/products/photoshop.html"}, React.createElement("img", {id:"circle1Image", className:"grayscale fadeImage", src:"photoshop_icon.png"})));
+                setImg2(prevImg2 => React.createElement("a", {href: "https://github.com/ZoomyZoomer"}, React.createElement("img", {id:"circle2Image", className:"grayscale fadeImage", src:"github_icon.png"})));
+                setImg3(prevImg3 => React.createElement("a", {href: "https://eclipseide.org/"}, React.createElement("img", {id:"circle3Image", className:"grayscale fadeImage", src:"eclipse_icon.png"})));
+                setImg4(prevImg4 => React.createElement("a", {href: "https://www.clipstudio.net/en/"}, React.createElement("img", {id:"circle4Image", className:"grayscale fadeImage", src:"clipstudiopaint_icon.png"})));
+                setImg5(prevImg5 => React.createElement("a", {href: "https://code.visualstudio.com/"}, React.createElement("img", {id:"circle5Image", className:"grayscale fadeImage", src:"visualstudio_icon.png"})));
                 circle1.classList.remove("circle1-1");
                 circle1.classList.add("circle1-2Anim");
                 circle2.classList.remove("circle2-1");
@@ -116,11 +122,11 @@ function Experience() {
                 break;
             case 2:
                 setText(prevText => "LANGUAGES");
-                setImg1(prevImg1 => React.createElement("img", {id:"circle1Image", className:"grayscale", src:"html_logo.png"}));
-                setImg2(prevImg2 => React.createElement("img", {id:"circle2Image", className:"grayscale", src:"javascript_logo.png"}));
-                setImg3(prevImg3 => React.createElement("img", {id:"circle3Image", className:"grayscale", src:"c_logo.png"}));
-                setImg4(prevImg4 => React.createElement("img", {id:"circle4Image", className:"grayscale", src:"css_logo.png"}));
-                setImg5(prevImg5 => React.createElement("img", {id:"circle5Image", className:"grayscale", src:"java_logo.png"}));
+                setImg1(prevImg1 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/HTML"}, React.createElement("img", {id:"circle1Image", className:"grayscale", src:"html_logo.png"})));
+                setImg2(prevImg2 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/JavaScript"}, React.createElement("img", {id:"circle2Image", className:"grayscale", src:"javascript_logo.png"})));
+                setImg3(prevImg3 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/C_(programming_language)"}, React.createElement("img", {id:"circle3Image", className:"grayscale", src:"c_logo.png"})));
+                setImg4(prevImg4 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/CSS"}, React.createElement("img", {id:"circle4Image", className:"grayscale", src:"css_logo.png"})));
+                setImg5(prevImg5 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/Java_(programming_language)"}, React.createElement("img", {id:"circle5Image", className:"grayscale", src:"java_logo.png"})));
                 circle1.classList.remove("circle1-2");
                 circle1.classList.add("circle1Anim");
                 circle2.classList.remove("circle2-2");
@@ -162,14 +168,17 @@ function Experience() {
             </div>
             <div className="expHeader">
                 <p>Throughout my personal projects and classwork, I've used various
-                     <br></br> languages, libraries, and IDEs.</p>
+                     <br></br> languages, libraries, and applications.</p>
             </div>
         </div>
         <div className="sliderRelative">
             <div className="sliderGrid">
                 <div>
-                    <p>{text}</p>
-                    <FontAwesomeIcon id="rightArrow" onClick={() => nextSlide()} icon={faCaretRight} size = '3x' color = 'rgb(30, 48, 80)'/>
+                    <div>
+                        <p>{text}</p>
+                        <FontAwesomeIcon id="rightArrow" onClick={() => nextSlide()} icon={faCaretRight} size = '3x' color = 'rgb(30, 48, 80)'/>
+                    </div>
+                    
                 </div>
 
                 <div className="griddy">
@@ -181,6 +190,26 @@ function Experience() {
                         {React.createElement("div", {className: "circle5", id: "c5"}, img5)}
                     </div>
                     <div className="border"></div>
+                    <div className="rightDisplay">
+                        <p>{text2}</p>
+                        <div className="miniflex">
+                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-211-computer-architecture">COMPUTER ARCHITECTURE</a>
+                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-112-data-structures">DATA STRUCTURES</a>
+                        </div>
+                        <div className="miniflex">
+                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-214-systems-programming">SYSTEMS PROGRAMMING</a>
+                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-206-introduction-to-discrete-structures-ii">DISCRETE STRUCTURES I-II</a>
+                        </div>
+                        <div className="miniflex">
+                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-314-principles-of-programming-languages">PRINCIPLES OF PROGRAMMING LANGUAGES</a>
+                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-344-design-and-analysis-of-computer-algorithms">COMPUTER ALGORITHMS</a>
+                        </div>
+                        <div className="miniflex">
+                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-416-operating-systems-design">OPERATING SYSTEMS DESIGN</a>
+                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-213-software-methodology">SOFTWARE METHODOLOGY</a>
+                        </div>
+                        
+                    </div>
                 </div>
                 
 

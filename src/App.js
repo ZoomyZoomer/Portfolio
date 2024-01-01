@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import About from './components/About'
 import Goals from './components/Goals'
 import Experience from './components/Experience'
+import Resume from './components/Resume'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Goals />
       <a id="Experience"></a>
       <Experience />
+      <Resume />
 
     </div>
 
