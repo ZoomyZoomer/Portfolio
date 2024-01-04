@@ -1,5 +1,5 @@
 html {
-    height: 4000px;
+    height: 6000px;
     scroll-behavior: smooth;
 }
 
@@ -697,6 +697,7 @@ html:not([data-scroll='0']) .navflex {
 }
 
 .circle1-2{
+    z-index: 10;
     left: 125px;
     bottom: 260px;
     height: 100px;
@@ -1116,6 +1117,11 @@ html:not([data-scroll='0']) .navflex {
     align-items: center;
 }
 
+.circle5-2:hover{
+    transition: z-index .7s;
+    z-index: 200;
+}
+
 .circle5-2Anim{
     top: 250px;
     left: 60px;
@@ -1181,7 +1187,7 @@ html:not([data-scroll='0']) .navflex {
 }
 
 #circle5Image{
-    z-index: 1;
+    z-index: 101;
     height: 120px;
     width: 120px;
     cursor: pointer;
@@ -1190,12 +1196,12 @@ html:not([data-scroll='0']) .navflex {
 
 #circle5Image:hover{
     transition: height 0.7s, width 0.7s;
-    height: 140px;
-    width: 140px;
+    height: 130px;
+    width: 130px;
 }
 
 #circle3Image{
-    z-index: 1;
+    z-index: 101;
     height: 130px;
     width: 120px;
     cursor: pointer;
@@ -1204,12 +1210,12 @@ html:not([data-scroll='0']) .navflex {
 
 #circle3Image:hover{
     transition: height 0.7s, width 0.7s;
-    height: 150px;
-    width: 140px;
+    height: 140px;
+    width: 130px;
 }
 
 #circle2Image{
-    z-index: 1;
+    z-index: 101;
     height: 100px;
     width: 100px;
     cursor: pointer;
@@ -1218,8 +1224,8 @@ html:not([data-scroll='0']) .navflex {
 
 #circle2Image:hover{
     transition: height 0.7s, width 0.7s;
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
 }
 
 #circle1Image{
@@ -1246,8 +1252,8 @@ html:not([data-scroll='0']) .navflex {
 
 #circle4Image:hover{
     transition: height 0.7s, width 0.7s;
-    height: 110px;
-    width: 110px;
+    height: 100px;
+    width: 100px;
 }
 
 .grayscale{
@@ -1374,7 +1380,7 @@ html:not([data-scroll='0']) .navflex {
     border-style: solid;
     color: white;
     background-color: transparent;
-    transition: padding 0.7s;
+    transition: padding 0.7s, background-color 0.7s;
 }
 
 .resumeFlex > a > button:hover {
@@ -1389,4 +1395,183 @@ html:not([data-scroll='0']) .navflex {
     font-size: 26px;
     color: white;
     margin-top: -350px;
+}
+
+.horizontalBar {
+    width: 100%;
+    background-color:  #a0a0a0;
+    border-radius: 30%;
+    height: 2px;
+}
+
+.noclick {
+    pointer-events: none;
+    cursor: auto;
+}
+
+/* PROJECTS */
+
+.projectContainer{
+    background-color: #f3f3f3;
+    width: 100%;
+}
+
+.projectHeadingFlex{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 20px;
+}
+
+.projectHeadingFlex > p{
+    margin-top: 150px;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.projectHeadingFlex > a{
+    cursor: pointer;
+    color: #333333;
+    text-decoration: none;
+    margin-top: 160px;
+    font-family: Roboto Slab, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.projectGrid{
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+}
+
+.shake{
+    animation: shake 1s infinite linear;
+}
+
+.shake:hover{
+    animation-play-state: paused;
+}
+
+@keyframes shake {
+    33%{
+        transform: rotate(3deg)
+    }
+    66%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.project{
+    margin-left: 100px;
+    margin-top: 100px;
+    padding-top: 100px;
+    height: 250px;
+    width: 400px;
+}
+
+.project:hover{
+    background-color: #e9e9e9;
+    border-radius: 30%;
+}
+
+.project > img{
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    animation: codeShake 2s infinite ease-in;
+}
+
+.project > h1 {
+    cursor: pointer;
+}
+
+@keyframes codeShake{
+    0%{
+        transform: rotate(0);
+    }
+    15%{
+        transform: rotate(15deg);
+    }
+    66%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.relativeCont {
+    position: relative;
+}
+
+.displayBox {
+    z-index: 100;
+    position: fixed;
+    top: 5em;
+    left: 45em;
+    height: 800px;
+    width: 600px;
+    background-color: white;
+    animation: inAnimation 0.2s 1 ease-in-out;
+}
+
+.shadow{
+    filter: brightness(50%);
+}
+
+@keyframes inAnimation {
+    0%{
+        top: 0em;
+        left: 45em;
+        opacity: 0.5;
+    }
+    100%{
+        top: 5em;
+        left: 45em;
+        opacity: 1;
+    }
+}
+
+.displayHeadingGrid {
+    padding-top: 10px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: #e5e5e5;
+    grid-template-columns: 1fr;
+    border-bottom-color: #dddddd;
+    border-bottom-style: solid;
+}
+
+.miniHeadingGrid {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 1fr 30px;
+}
+
+.miniHeadingGrid > p {
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+.displayHeadingGrid > h6 {
+    font-family: Roboto Slab, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: -5px;
+}
+
+#XIcon {
+    cursor: pointer;
 }

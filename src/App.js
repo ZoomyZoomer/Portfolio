@@ -5,23 +5,27 @@ import About from './components/About'
 import Goals from './components/Goals'
 import Experience from './components/Experience'
 import Resume from './components/Resume'
+import Projects from './components/Projects'
 
 function App() {
   return (
-
-    <div>
+<div>
+    <div id="entireContainer">
       <a id="Home"></a>
-      <Navbar />
-      <MainContent />
+        <Navbar />
+        <MainContent />
       <a id="About"></a>
-      <About />
+        <About />
       <a id="Goals"></a>
-      <Goals />
+        <Goals />
       <a id="Experience"></a>
-      <Experience />
-      <Resume />
-
-    </div>
+        <Experience />
+        <Resume />
+        </div>
+      <a id="Projects"></a>
+        <Projects />
+    
+  </div>
 
   )
 }
