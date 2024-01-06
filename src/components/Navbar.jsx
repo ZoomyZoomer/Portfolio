@@ -24,7 +24,7 @@ function Navbar() {
                     <a id="navGoals" href="#Goals">GOALS</a>
                     <a id="navExperience" href="#Experience">EXPERIENCE</a>
                     <a id="navProjects" href="#Projects">PROJECTS</a>
-                    <img src="info.png"></img>
+                    <a id="navContact" href="#Contact">CONTACT</a>
                 </div>
                 
             </section>
