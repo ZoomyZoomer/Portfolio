@@ -134,7 +134,8 @@ function Projects() {
     tag2: "React",
     tag3: "Git",
     tag4: "Visual Studio",
-    GitRepository: [<a href="https://github.com/ZoomyZoomer/pathfinder"><button>GIT REPOSITORY</button></a>],
+    ReadMe: [<a href="https://zoomyzoomer.github.io/pathfinder/"><button>WEBSITE</button></a>],
+    GitRepository: ["OR ", <a href="https://github.com/ZoomyZoomer/pathfinder"><button>GIT REPOSITORY</button></a>],
     function: setShowDis
   }
 

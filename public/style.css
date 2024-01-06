@@ -296,7 +296,16 @@ html:not([data-scroll='0']) .navflex {
     display: grid;
     background-color: rgb(238, 238, 238);
     border-radius: 10%;
-    transition: opacity 0.75s;
+    animation: TLDROpac 1s 1 linear;
+}
+
+@keyframes TLDROpac {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .TLDRcontainer > p{
