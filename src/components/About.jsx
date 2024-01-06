@@ -1,28 +1,53 @@
-import React from 'react'
+import React, {useState} from 'react'
+
+
+function TLDR(){
+
+   return (
+          <div id="TLDR" className='TLDRcontainer'>
+              <p>TL;DR?</p>
+              <div className="TLDRflex">
+                  <div>
+                    <img src="cap_icon.png"></img>
+                    <p>Rutgers Uni</p>
+                  </div>
+                  <div>
+                  <img src="paint_icon.png"></img>
+                  <p>Digital Artist</p>
+                  </div>
+              </div>
+            </div>
+           )
+
+}
+
+function removePresent({setVisible}) {
+
+  var element = document.getElementById("present");
+
+    var ele = document.getElementById("present");
+    ele.classList.remove("present");
+    ele.classList.add("presentOpen");
+
+    setTimeout(letAnimate, 1000);
+
+      function letAnimate(){
+        setVisible(true);
+        element.parentNode.removeChild(element);
+      }
+      
+      
+
+
+}
+
 
 function About() {
 
-  const removePresent = () => {
+  const [visible, setVisible] = useState(false);
+ 
 
-    var element = document.getElementById("present");
-
-      var ele = document.getElementById("present");
-      ele.classList.remove("present");
-      ele.classList.add("presentOpen");
-
-      setTimeout(letAnimate, 1000);
-
-        function letAnimate(){
-          element.parentNode.removeChild(element);
-          var element2 = document.getElementById("TLDR");
-          element2.classList.remove("transparent");
-        }
-
-
-
-
-  }
-
+  
   return (
 
     <section className="aboutFlex">
@@ -42,21 +67,9 @@ function About() {
                 Apart from coding, I like playing strategy games and making digital art :&#41;
             </p>
             <div className="presentContainer">
-              <img id="present" src="present-icon.png" className="present" onClick={removePresent}></img>
+              <img id="present" src="present-icon.png" className="present" onClick={() => removePresent({setVisible})}></img>
             </div>
-            <div id="TLDR" className={'TLDRcontainer' + ' ' + 'transparent'}>
-              <p>TL;DR?</p>
-              <div className="TLDRflex">
-                  <div>
-                    <img src="cap_icon.png"></img>
-                    <p>Rutgers Uni</p>
-                  </div>
-                  <div>
-                  <img src="paint_icon.png"></img>
-                  <p>Digital Artist</p>
-                  </div>
-              </div>
-            </div>
+            {visible && <TLDR />}
 
 
           </div>

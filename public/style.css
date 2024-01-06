@@ -1,11 +1,13 @@
 html {
     height: 6000px;
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body {
     margin: 0;
     height: 100%;
+    width: 100%;
     font-family: Lato, sans-serif;
     scroll-behavior: smooth;
 }
@@ -1424,7 +1426,7 @@ html:not([data-scroll='0']) .navflex {
 }
 
 .projectHeadingFlex > p{
-    margin-top: 150px;
+    margin-top: 100px;
     font-weight: 300;
     font-size: 30px;
     letter-spacing: 1px;
@@ -1434,7 +1436,7 @@ html:not([data-scroll='0']) .navflex {
     cursor: pointer;
     color: #333333;
     text-decoration: none;
-    margin-top: 160px;
+    margin-top: 120px;
     font-family: Roboto Slab, sans-serif;
     letter-spacing: 1px;
     font-weight: 300;
@@ -1470,10 +1472,10 @@ html:not([data-scroll='0']) .navflex {
 
 .project{
     margin-left: 100px;
-    margin-top: 100px;
     padding-top: 100px;
     height: 250px;
     width: 400px;
+    cursor: pointer;
 }
 
 .project:hover{
@@ -1515,9 +1517,9 @@ html:not([data-scroll='0']) .navflex {
     z-index: 100;
     position: fixed;
     top: 5em;
-    left: 45em;
-    height: 800px;
-    width: 600px;
+    left: 36.5em;
+    height: 500px;
+    width: 800px;
     background-color: white;
     animation: inAnimation 0.2s 1 ease-in-out;
 }
@@ -1526,15 +1528,32 @@ html:not([data-scroll='0']) .navflex {
     filter: brightness(50%);
 }
 
+.outAnimation {
+    animation: outAnimation 0.2s 1 ease-in-out;
+}
+
+@keyframes outAnimation {
+    0%{
+        top: 5em;
+        left: 36.5em;
+        opacity: 1;
+    }
+    100%{
+        top: 0em;
+        left: 36.5em;
+        opacity: 0.5;
+    }
+}
+
 @keyframes inAnimation {
     0%{
         top: 0em;
-        left: 45em;
+        left: 36.5em;
         opacity: 0.5;
     }
     100%{
         top: 5em;
-        left: 45em;
+        left: 36.5em;
         opacity: 1;
     }
 }
@@ -1574,4 +1593,110 @@ html:not([data-scroll='0']) .navflex {
 
 #XIcon {
     cursor: pointer;
+    transition: color 0.5s;
+}
+
+#XIcon:hover{
+    transition: color 0.5s;
+    color:#868686;
+}
+
+.displayFlex {
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayFlex > p {
+    font-family: Roboto Slab, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tagFlex {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 9999px;
+    background-color: #9e9e9e;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s, padding 0.5s;
+}
+
+.tagFlex:hover {
+    transition: background-color 0.5s, padding 0.5s;
+    background-color: #b1b1b1;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.tagFlex > p{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.displayFooter {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayFooterFlex {
+    margin-top: 15px;
+    height: 120px;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+    border-top-color: #dddddd;
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+
+.displayFooter > p {
+    margin: 0;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+}
+
+.displayFooter > a > button {
+    font-family: Roboto Slab, sans-serif;
+    margin: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    border-color: #cecece;
+    border-width: 2px;
+    border-style: solid;
+    transition: padding 0.5s;
+}
+
+.displayFooter > a > button:hover {
+    cursor: pointer;
+    transition: padding 0.5s;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(240, 240, 240);
+}
+
+#buttons {
+    margin-bottom: 30px;
 }
