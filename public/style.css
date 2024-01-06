@@ -1424,6 +1424,7 @@ html:not([data-scroll='0']) .navflex {
 /* PROJECTS */
 
 .projectContainer{
+    background-color:#fcfcfc;
     width: 100%;
 }
 
