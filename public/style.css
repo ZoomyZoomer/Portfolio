@@ -106,7 +106,7 @@ html:not([data-scroll='0']) .navflex {
 
 
 
-.navleftflex > img, .navrightflex > img {
+.navleftflex > #img, .navrightflex > img {
     height: 24px;
     object-fit: contain;
     display: block;
@@ -116,15 +116,22 @@ html:not([data-scroll='0']) .navflex {
 }
 
 
-.navleftflex > img:hover {
+.navleftflex > #img:hover {
 
-    animation: spin 1s infinite linear;
+    animation: tip 1s infinite ease-in-out;
 
 }
 
-@keyframes spin {
-    from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes tip {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(25deg);
+    }
+    100%{
+        transform: rotate(0deg)
+    }
 }
 
 .navleftflex, .navrightflex {
@@ -163,22 +170,6 @@ html:not([data-scroll='0']) .navflex {
     height: 20px;
     padding-top: 2px;
     cursor: pointer;
-}
-
-.navrightflex > img:hover {
-    animation: grow 1s infinite linear;
-}
-
-@keyframes grow {
-    0% {
-        transform: scale(1);
-    }
-    75%{
-        transform: scale(1.15);
-    }
-    100%{
-        transform: scale(1);
-    }
 }
 
 .navrightflex > a {
@@ -394,12 +385,12 @@ html:not([data-scroll='0']) .navflex {
     margin: 0 180px; /* Add some margin between circles if needed */
 }
 
-.circle > img {
+.circle > #img {
     height: 60px;
     width: 60px;
 }
 
-.circle > img:hover {
+.circle > #img:hover {
     animation: spin 1s infinite ease-in-out;
     cursor: pointer;
 }
@@ -1791,6 +1782,7 @@ a {
 }
 
 .socialsFlex {
+    position: relative;
     width: 100%;
     margin-top: 40px;
     display: flex;
@@ -1866,7 +1858,7 @@ a {
     width: 50px;
 }
 
-.iconBlock > img {
+.iconBlock > a > img {
     height: 30px;
     width: 30px;
     fill: white;
@@ -1904,6 +1896,29 @@ a {
 .socialsFlex > a {
     text-decoration: none;
     color:#bebebe;
+}
+
+.discordInfo {
+    display: flex;
+    background-color: rgb(20, 20, 20);
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    left: 967px;
+    bottom: 58px;
+    transition: opacity 0.5s;
+}
+
+.discordInfo > p {
+    color: rgb(121, 121, 121);
+}
+
+.zeroOpacity {
+    transition: opacity 0.5s;
+    opacity: 0;
 }
 
 /* ANIMATIONS */

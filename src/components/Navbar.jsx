@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHatWizard } from '@fortawesome/free-solid-svg-icons'
 
 
 function Navbar() {
@@ -11,7 +13,7 @@ function Navbar() {
             <section className="navflex">
                 
                 <div className="navleftflex">
-                    <img src="icon.png"></img>
+                    <FontAwesomeIcon id="img" icon={faHatWizard} size = '4x' color = '#EEEEEE'/>
                     <a href="#Home"> KAMIL WISNIEWSKI </a>
                 </div>
 

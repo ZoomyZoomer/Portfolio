@@ -1,4 +1,8 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSuitcase } from '@fortawesome/free-solid-svg-icons'
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
 
 function Goals() {
 
@@ -46,9 +50,9 @@ function Goals() {
           </div>
         <div className="goalsImageFlex">
 
-            <div className="circle"><img src="Suitcase_icon.svg"></img></div>
-            <div className="circle"><img src="laptop_icon.png"></img></div>
-            <div className="circle"><img src="coding_icon.png"></img></div>
+            <div className="circle"><FontAwesomeIcon id="img" icon={faSuitcase} size = '4x' color = '#333'/></div>
+            <div className="circle"><FontAwesomeIcon id="img" icon={faLaptopCode} size = '4x' color = '#333'/></div>
+            <div className="circle"><FontAwesomeIcon id="img" icon={faCode} size = '4x' color = '#333'/></div>
           
           
         </div>
