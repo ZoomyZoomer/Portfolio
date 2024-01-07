@@ -1,10 +1,11 @@
 html {
-    height: 6000px;
     scroll-behavior: smooth;
     width: 100%;
+    
 }
 
 body {
+    background-color:#fcfcfc;
     margin: 0;
     height: 100%;
     width: 100%;
@@ -102,6 +103,7 @@ html:not([data-scroll='0']) .navflex {
 [data-scroll='0'] .navflex {
     background-color: transparent;
 }
+
 
 
 .navleftflex > img, .navrightflex > img {
@@ -310,8 +312,8 @@ html:not([data-scroll='0']) .navflex {
 }
 
 .TLDRcontainer > p{
-    font-family: lato;
-    font-weight: 300;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
     font-size: 22px;
     color: #525252;
     padding-top: 20px;
@@ -321,7 +323,7 @@ html:not([data-scroll='0']) .navflex {
 .TLDRflex > div {
     padding-left: 50px;
     padding-right: 50px;
-    color: #9e9e9e;
+    color: #505050;
 }
 
 .TLDRflex > div > img {
@@ -637,7 +639,7 @@ html:not([data-scroll='0']) .navflex {
 .display > div {
     border-radius: 50%;
     position: absolute;
-    background-color: #cfe2e9;
+    background-color: #f3f3f3;
 }
 
 .circle1{
@@ -1532,6 +1534,8 @@ html:not([data-scroll='0']) .navflex {
     width: 800px;
     background-color: white;
     animation: inAnimation 0.2s 1 ease-in-out;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .shadow{
@@ -1577,6 +1581,8 @@ html:not([data-scroll='0']) .navflex {
     grid-template-columns: 1fr;
     border-bottom-color: #dddddd;
     border-bottom-style: solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .miniHeadingGrid {
@@ -1634,7 +1640,7 @@ a {
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 9999px;
-    background-color: #9e9e9e;
+    background-color: #a8d2e2;
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
@@ -1644,7 +1650,7 @@ a {
 
 .tagFlex:hover {
     transition: background-color 0.5s, padding 0.5s;
-    background-color: #b1b1b1;
+    background-color: #8dbed1;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -1677,6 +1683,8 @@ a {
     border-top-color: #dddddd;
     border-top-style: solid;
     border-top-width: 3px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .displayFooter > p {
@@ -1709,4 +1717,249 @@ a {
 
 #buttons {
     margin-bottom: 30px;
+}
+
+/* CONTACT */
+
+.contactGridWrap{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(238, 238, 238);
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contactFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contactFlex > p {
+    font-weight: 300;
+    font-size: 30px;
+    font-family: Lato, sans-serif;
+}
+
+.contactFlex > h6 {
+    margin-top: 8px;
+    line-height: 25px;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: Roboto Slab, sans-serif;
+}
+
+.contactFlex > img {
+    margin-right: 15px;
+    height: 90px;
+    width: 90px;
+    margin-bottom: 35px;
+}
+
+.contactFlex > a > button {
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Lato, sans-serif;
+    border-width: 2px;
+    border-style: solid;
+    transition: padding 0.3s;
+}
+
+.contactFlex > a > button:hover{
+    transition: padding 0.3s;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgb(219, 219, 219);
+}
+
+/* FOOTER */
+
+.footerGridWrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #222;
+}
+
+.socialsFlex {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.socialsFlex > p {
+    color: #afafaf;
+}
+
+#ig {
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+#ig:hover {
+    background-color:rgb(207, 142, 186);
+    padding: 3px;
+    transition: background-color 0.3s, padding 0.3s;
+
+}
+
+#li {
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+#li:hover {
+    background-color: #0077B5;
+    padding: 3px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+#sy {
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+#sy:hover {
+    background-color:#06c200;
+    padding: 3px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+#gh {
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+#gh:hover {
+    background-color:#006bc2;
+    padding: 3px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+#dc {
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+#dc:hover {
+    background-color:#5865F2;
+    padding: 3px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+.iconBlock{
+    margin: 0 2px;
+    background-color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+}
+
+.iconBlock > img {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+
+#tm > p {
+    color: rgb(160, 160, 160);
+}
+
+#totop {
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.5s;
+    animation: bounce 1s infinite linear;
+}
+
+#totop:hover {
+    transition: color 0.5s;
+    animation-play-state: paused;
+    color: #ffffff;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-4px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.socialsFlex > a {
+    text-decoration: none;
+    color:#bebebe;
+}
+
+/* ANIMATIONS */
+
+.animateMail {
+    animation: animateMail 1.5s 1 ease-in-out;
+}
+
+@keyframes animateMail {
+    0%{
+        transform: translateX(-800px);
+    }
+    80%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: translateX(0px);
+        transform: rotate(0deg);
+    }
+    
+}
+
+.animateTopWelcome {
+    animation: animateTopWelcome 1s 1 ease-in-out;
+}
+
+@keyframes animateTopWelcome {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    60%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.animateBottomWelcome {
+    animation: animateBottomWelcome 2s 1 ease-in-out;
+}
+
+@keyframes animateBottomWelcome {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    60%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }

@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUniversity } from '@fortawesome/free-solid-svg-icons'
+import { faPaintBrush} from '@fortawesome/free-solid-svg-icons'
+import { faGift} from '@fortawesome/free-solid-svg-icons'
 
 function TLDR(){
 
@@ -8,11 +11,11 @@ function TLDR(){
               <p>TL;DR?</p>
               <div className="TLDRflex">
                   <div>
-                    <img src="cap_icon.png"></img>
+                  <FontAwesomeIcon icon={faUniversity} size = '4x' color = '#333'/>
                     <p>Rutgers Uni</p>
                   </div>
                   <div>
-                  <img src="paint_icon.png"></img>
+                  <FontAwesomeIcon icon={faPaintBrush} size = '4x' color = '#333'/>
                   <p>Digital Artist</p>
                   </div>
               </div>
@@ -67,7 +70,7 @@ function About() {
                 Apart from coding, I like playing strategy games and making digital art :&#41;
             </p>
             <div className="presentContainer">
-              <img id="present" src="present-icon.png" className="present" onClick={() => removePresent({setVisible})}></img>
+              <FontAwesomeIcon id="present" className="present" onClick={() => removePresent({setVisible})} icon={faGift} size = '4x' color = '#333'/>
             </div>
             {visible && <TLDR />}
 
