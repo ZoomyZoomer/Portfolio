@@ -2031,13 +2031,16 @@ a {
     position: absolute;
     text-align: center;
     align-items: center;
-    left: 968px;
-    bottom: 58px;
+    bottom: 50px;
     transition: opacity 0.5s;
 }
 
 .discordInfo > p {
     color: rgb(121, 121, 121);
+}
+
+#dc {
+    position: relative;
 }
 
 .zeroOpacity {
