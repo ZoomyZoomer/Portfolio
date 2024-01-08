@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function Resume() {
 
@@ -21,6 +21,26 @@ function Resume() {
 
   }
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById("resumeButton").classList.add("growButton"); 
+        }
+      });
+    });
+    
+    const element = document.getElementById("resumeButton");
+    if (element) {
+      observer.observe(element);
+    }
+
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []); 
+
   return (
     <section className="resumeContainer">
       <div className="horizontalBar"></div>
@@ -28,12 +48,15 @@ function Resume() {
        <div className="resumeBG">
         
        </div>
-       <div className="resumeFlex">
-            <a href="resume.pdf" download><button id="resumeButton" onClick={() => nextCopy()}>{copy}</button> </a>
-       </div>
-       <div className="resumeFlex">
-            <p>CHECK OUT MY RESUME :&#41;</p>
-       </div>
+        <div>
+          <div className="resumeFlex">
+              <a href="resume.pdf" download><button id="resumeButton" onClick={() => nextCopy()}>{copy}</button> </a>
+        </div>
+        <div className="resumeFlex">
+              <p id="resumeText">CHECK OUT MY RESUME :&#41;</p>
+        </div>
+        </div>
+       
        <div className="horizontalBar"></div>
         
     </section>

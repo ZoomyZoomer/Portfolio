@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
@@ -26,9 +26,9 @@ function Display(props){
 
   function closeAll(){
     document.body.style.overflow = "visible";
+    document.body.style.overflowX = "hidden";
     document.getElementById("entireContainer").classList.remove("shadow");
     document.getElementById("projectContainer").classList.remove("shadow");
-    document.getElementById("displayBox").classList.add("outAnimation");
 
     setTimeout(() => letAnimate, 200);
 
@@ -41,36 +41,38 @@ function Display(props){
   
 
   return (
-    <div id="displayBox" className="displayBox">
-      <div className="displayHeadingGrid">
-          <div className="miniHeadingGrid">
-            <p>{props.title}</p>
-            <FontAwesomeIcon onClick={() => closeAll()} id="XIcon" icon={faXmark} color = '#b1b1b1' size="lg"/>
+    <div id="displayBoxFlex">
+      <div id="displayBox" className="displayBox">
+        <div className="displayHeadingGrid">
+            <div className="miniHeadingGrid">
+              <p>{props.title}</p>
+              <FontAwesomeIcon onClick={() => closeAll()} id="XIcon" icon={faXmark} color = '#b1b1b1' size="lg"/>
+            </div>
+            
+            <h6>{props.subTitle}</h6>
+        </div>
+        <div className="displayFlex">
+            <p>{props.description}<br></br><br></br>{props.description2}<br></br><br></br>{props.description3}
+            </p>
+        </div>
+        <div className="displayFlex">
+            <Tag Name={props.tag1}/>
+            <Tag Name={props.tag2} />
+            <Tag Name={props.tag3} />
+            <Tag Name={props.tag4} />  
+        </div>
+        <div className="displayFooterFlex">
+          <div className="displayFooter">
+            <p>Looking For More?</p>
           </div>
-          
-          <h6>{props.subTitle}</h6>
-      </div>
-      <div className="displayFlex">
-          <p>{props.description}<br></br><br></br>{props.description2}<br></br><br></br>{props.description3}
-          </p>
-      </div>
-      <div className="displayFlex">
-          <Tag Name={props.tag1}/>
-          <Tag Name={props.tag2} />
-          <Tag Name={props.tag3} />
-          <Tag Name={props.tag4} />  
-      </div>
-      <div className="displayFooterFlex">
-        <div className="displayFooter">
-          <p>Looking For More?</p>
+          <div id="buttons" className="displayFooter">
+              {props.ReadMe}
+              {props.GitRepository}
+          </div>
         </div>
-        <div id="buttons" className="displayFooter">
-            {props.ReadMe}
-            {props.GitRepository}
-        </div>
-      </div>
-      
+        
 
+      </div>
     </div>
   )
 }
@@ -140,9 +142,90 @@ function Projects() {
     function: setShowDis
   }
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById("project1").classList.add("project1Opac"); 
+          document.getElementById("project1").classList.add("fullOpacity"); 
+        }
+      });
+    });
+    
+    const element = document.getElementById("project1");
+    if (element) {
+      observer.observe(element);
+    }
+
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById("project2").classList.add("project2Opac"); 
+          document.getElementById("project2").classList.add("fullOpacity"); 
+        }
+      });
+    });
+    
+    const element = document.getElementById("project2");
+    if (element) {
+      observer.observe(element);
+    }
+
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
   
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById("project3").classList.add("project3Opac"); 
+          document.getElementById("project3").classList.add("fullOpacity"); 
+        }
+      });
+    });
+    
+    const element = document.getElementById("project4");
+    if (element) {
+      observer.observe(element);
+    }
 
 
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById("project4").classList.add("project4Opac"); 
+          document.getElementById("project4").classList.add("fullOpacity"); 
+        }
+      });
+    });
+    
+    const element = document.getElementById("project4");
+    if (element) {
+      observer.observe(element);
+    }
+
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div id="based">
@@ -152,31 +235,31 @@ function Projects() {
       currProj == "DFS" ? <Display {...DFSProps}/> :
       <Display {...PFProps}/> ) }
     <section id="projectContainer" className="projectContainer">
-
-        <div className="projectHeadingFlex">
-            <p>SOME OF MY PROJECTS</p>
+        <div id="projHeadingText">
+          <div className="projectHeadingFlex">
+              <p>SOME OF MY PROJECTS</p>
+          </div>
+          <div className="projectHeadingFlex">
+              <a className="shake" href="https://github.com/ZoomyZoomer">&#40;more soon&#41;</a>
+          </div>
         </div>
-        <div className="projectHeadingFlex">
-            <a className="shake" href="https://github.com/ZoomyZoomer">&#40;more soon&#41;</a>
-        </div>
-
         <div className="projectGrid">
 
-            <div onClick={() => {setShowDis(true); setProj("BM");}} className="project">
+            <div id="project1" onClick={() => {setShowDis(true); setProj("BM");}} className="project">
                 <img src="coding2_icon.png"></img>
                 <h1 >Better Malloc</h1>
             </div>
-            <div onClick={() => {setShowDis(true); setProj("LS");}} className="project">
+            <div id="project2" onClick={() => {setShowDis(true); setProj("LS");}} className="project">
                 <img src="coding2_icon.png"></img>
                 <h1>Unix Shell</h1>
             </div>
-            <div onClick={() => {setShowDis(true); setProj("DFS");}} className="project">
+            <div id="project3" onClick={() => {setShowDis(true); setProj("DFS");}} className="project">
                 <img src="coding2_icon.png"></img>
                 <h1>Directory Scanner</h1>
             </div>
             <div className="projectTemp"> 
             </div>
-            <div onClick={() => {setShowDis(true); setProj("PF");}} className="project">
+            <div id="project4" onClick={() => {setShowDis(true); setProj("PF");}} className="project">
                 <img src="bracket_icon.png"></img>
                 <h1>Pathfinder</h1>
             </div>

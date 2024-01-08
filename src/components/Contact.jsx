@@ -10,7 +10,7 @@ function Contact() {
         const observer = new IntersectionObserver(entries => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('animateMail'); // Add your animation class here
+              document.getElementById("mail").classList.add('animateMail'); 
             }
           });
         });
@@ -20,14 +20,34 @@ function Contact() {
           observer.observe(element);
         }
     
-        // Don't forget to disconnect the observer when the component unmounts
+        
+        return () => {
+          observer.disconnect();
+        };
+      }, []);
+
+      useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              document.getElementById("mailButton").classList.add('animateMailButton'); 
+            }
+          });
+        });
+        
+        const element = document.getElementById("mailButton");
+        if (element) {
+          observer.observe(element);
+        }
+    
+        
         return () => {
           observer.disconnect();
         };
       }, []);
 
   return (
-    <section className="contactGridWrap">
+    <section id="contactGridWrap" className="contactGridWrap">
         <div id="mailFlex" className="contactFlex">
             <img id="mail" src="mail.png"></img>
         </div>
@@ -38,7 +58,7 @@ function Contact() {
             <h6>I'm always looking for internship opportunities <br></br> and projects to work on!</h6>
         </div>
         <div className="contactFlex">
-            <a href="mailto: realisticallyspeaking101@gmail.com"><button>Say Hi</button></a>
+            <a href="mailto: realisticallyspeaking101@gmail.com"><button id="mailButton">Say Hi</button></a>
         </div>
     </section>
   )

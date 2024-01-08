@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -158,7 +158,68 @@ function Experience() {
 
             
         }
+
+        
     }
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              document.getElementById("rightDisplay").classList.add("fullOpacity");
+            }
+          });
+        });
+        
+        const element = document.getElementById("rightDisplay");
+        if (element) {
+          observer.observe(element);
+        }
+    
+        return () => {
+          observer.disconnect();
+        };
+      }, []);
+
+      useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              document.getElementById("expHeader").classList.add("moveTextRight"); 
+            }
+          });
+        });
+        
+        const element = document.getElementById("expHeader");
+        if (element) {
+          observer.observe(element);
+        }
+    
+
+        return () => {
+          observer.disconnect();
+        };
+      }, []);
+
+      useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              document.getElementById("display").classList.add("fullOpacity"); 
+            }
+          });
+        });
+        
+        const element = document.getElementById("display");
+        if (element) {
+          observer.observe(element);
+        }
+    
+
+        return () => {
+          observer.disconnect();
+        };
+      }, []);
     
   return (
     <section className="expContainer">
@@ -166,57 +227,62 @@ function Experience() {
             <div className="expHeader">
                 <h1>EXPERIENCE</h1>
             </div>
-            <div className="expHeader">
+            <div id="expHeader" className="expHeader">
                 <p>Throughout my personal projects and classwork, I've used various
                      <br></br> languages, libraries, and applications.</p>
             </div>
         </div>
-        <div className="sliderRelative">
-            <div className="sliderGrid">
-                <div>
-                    <div>
-                        <p>{text}</p>
-                        <FontAwesomeIcon id="rightArrow" onClick={() => nextSlide()} icon={faCaretRight} size = '3x' color = 'rgb(30, 48, 80)'/>
+        <div className="expGridFlex">
+          <div className="expGrid">
+            
+              <div>
+                    <div id="leftSideGrid">
+                      <p>{text}</p>
+                      <FontAwesomeIcon id="rightArrow" className="rightArrow" onClick={() => nextSlide()} icon={faCaretRight} size = '3x' color = 'rgb(30, 48, 80)'/>
                     </div>
-                    
-                </div>
+                    <div id="rightSideGrid">
+                      <p>{text2}</p>
+                    </div>
 
-                <div className="griddy">
-                    <div className="display">
-                        {React.createElement("div", {className: "circle1", id: "c1"}, img1)}
-                        {React.createElement("div", {className: "circle2", id: "c2"}, img2)}
-                        {React.createElement("div", {className: "circle3", id: "c3"}, img3)}
-                        {React.createElement("div", {className: "circle4", id: "c4"}, img4)}
-                        {React.createElement("div", {className: "circle5", id: "c5"}, img5)}
-                    </div>
-                    <div className="border"></div>
-                    <div className="rightDisplay">
-                        <p>{text2}</p>
-                        <div className="miniflex">
-                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-211-computer-architecture">COMPUTER ARCHITECTURE</a>
-                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-112-data-structures">DATA STRUCTURES</a>
-                        </div>
-                        <div className="miniflex">
-                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-214-systems-programming">SYSTEMS PROGRAMMING</a>
-                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-206-introduction-to-discrete-structures-ii">DISCRETE STRUCTURES I-II</a>
-                        </div>
-                        <div className="miniflex">
-                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-314-principles-of-programming-languages">PRINCIPLES OF PROGRAMMING LANGUAGES</a>
-                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-344-design-and-analysis-of-computer-algorithms">COMPUTER ALGORITHMS</a>
-                        </div>
-                        <div className="miniflex">
-                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-416-operating-systems-design">OPERATING SYSTEMS DESIGN</a>
-                            <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-213-software-methodology">SOFTWARE METHODOLOGY</a>
-                        </div>
-                        
-                    </div>
-                </div>
-                
+              </div>
+              <div>
 
-            </div>
+                  <div className="bottomGrid">
+
+                      <div id="display" className="display">
+                          {React.createElement("div", {className: "circle1", id: "c1"}, img1)}
+                          {React.createElement("div", {className: "circle2", id: "c2"}, img2)}
+                          {React.createElement("div", {className: "circle3", id: "c3"}, img3)}
+                          {React.createElement("div", {className: "circle4", id: "c4"}, img4)}
+                          {React.createElement("div", {className: "circle5", id: "c5"}, img5)}
+                      </div>
+                      <div className="border"></div>
+                      <div id="classes">
+                        <div className="miniflex">
+                              <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-211-computer-architecture">COMPUTER ARCHITECTURE</a>
+                              <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-112-data-structures">DATA STRUCTURES</a>
+                          </div>
+                          <div className="miniflex">
+                              <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-214-systems-programming">SYSTEMS PROGRAMMING</a>
+                              <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-206-introduction-to-discrete-structures-ii">DISCRETE STRUCTURES I-II</a>
+                          </div>
+                          <div className="miniflex">
+                              <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-314-principles-of-programming-languages">PRINCIPLES OF PROGRAMMING LANGUAGES</a>
+                              <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-344-design-and-analysis-of-computer-algorithms">COMPUTER ALGORITHMS</a>
+                          </div>
+                          <div className="miniflex">
+                              <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-416-operating-systems-design">OPERATING SYSTEMS DESIGN</a>
+                              <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-213-software-methodology">SOFTWARE METHODOLOGY</a>
+                          </div>
+                      </div>
+
+
+                  </div>
+
+              </div>
+
+          </div>
         </div>
-
-
     </section>
   )
 }

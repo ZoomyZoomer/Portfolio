@@ -1,16 +1,27 @@
 html {
     scroll-behavior: smooth;
+    width: auto;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    
+    height: 100%;
 }
 
 body {
     background-color:#fcfcfc;
     margin: 0;
     height: 100%;
-    width: 100%;
+    width: auto;
     font-family: Lato, sans-serif;
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -176,10 +187,6 @@ html:not([data-scroll='0']) .navflex {
     padding-left: 30px;
 }
 
-
-
-
-
 .navflex {
     height: 80px;
     width: 100%;
@@ -241,6 +248,7 @@ html:not([data-scroll='0']) .navflex {
     display: flex;
     justify-content: center;
     text-align: center;
+    opacity: 0;
 
 }
 
@@ -329,7 +337,16 @@ html:not([data-scroll='0']) .navflex {
     justify-content: space-evenly;
 }
 
-/*Goals*/
+#myFlex {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Goals */
 
 .goalsWrapper {
     margin-top: 160px;
@@ -345,25 +362,25 @@ html:not([data-scroll='0']) .navflex {
     width: 100%;
     justify-content: center;
     text-align: center;
-  }
+}
 
-  .goalsHeadingFlex > p {
-    /* Remove padding-top: 100px; and margin-bottom: -70px; */
+.goalsHeadingFlex > p {
     font-family: Lato, sans-serif;
     font-size: 36px;
     font-weight: 300;
     color: #333333;
     padding-top: 50px;
     letter-spacing: 1px;
-  }
+}
 
-  .goalsImageFlex {
-    margin-top: 80px;
+.goalsImageFlex {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     width: auto;
     height: 200px;
+    transition: opacity 2s;
+    opacity: 0;
 }
 
 .goalsSection {
@@ -372,7 +389,7 @@ html:not([data-scroll='0']) .navflex {
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
+}
 
 .circle {
     display: flex;
@@ -382,15 +399,14 @@ html:not([data-scroll='0']) .navflex {
     width: 200px;
     border-radius: 50%;
     background-color: #cfe2e9;
-    margin: 0 180px; /* Add some margin between circles if needed */
 }
 
-.circle > #img {
+.circle > .img {
     height: 60px;
     width: 60px;
 }
 
-.circle > #img:hover {
+.circle > .img:hover {
     animation: spin 1s infinite ease-in-out;
     cursor: pointer;
 }
@@ -407,16 +423,16 @@ html:not([data-scroll='0']) .navflex {
 }
 
 @keyframes present {
-    20%{
+    20% {
         transform: rotate(20deg);
     }
-    40%{
+    40% {
         transform: rotate(-20deg);
     }
-    60%{
+    60% {
         transform: rotate(20deg);
     }
-    80%{
+    80% {
         transform: rotate(-20deg);
     }
 }
@@ -429,19 +445,19 @@ html:not([data-scroll='0']) .navflex {
 }
 
 @keyframes presentOpen {
-    20%{
+    20% {
         transform: rotate(30deg);
     }
-    40%{
+    40% {
         transform: rotate(-30deg);
     }
-    60%{
+    60% {
         transform: rotate(30deg);
     }
-    80%{
+    80% {
         transform: rotate(-30deg);
     }
-    100%{
+    100% {
         transform: translateY(-20px);
         opacity: 0;
     }
@@ -469,10 +485,10 @@ html:not([data-scroll='0']) .navflex {
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 20px;
+    opacity: 0;
 }
 
 .goalsTitle > div {
-    margin: 0 200px;
     margin-top: 20px;
     width: 160px;
     height: auto;
@@ -481,6 +497,21 @@ html:not([data-scroll='0']) .navflex {
 .goalsTitle > div > h4 {
     font-size: 16px;
     letter-spacing: 1px;
+}
+
+.goalsGridWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.bigFlexGoals {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .wrap {
@@ -493,20 +524,28 @@ html:not([data-scroll='0']) .navflex {
 .desc {
     display: flex;
     text-align: center;
+    transition: opacity 1.5s;
+    opacity: 0;
 }
 
 .desc > desc {
     font-family: Roboto Slab, sans-serif;
-    margin: 0 30px;
     width: 500px;
     line-height: 26px;
+}
+
+#career {
+    padding-bottom: 10px;
+}
+
+#experience {
+    padding-top: 30px;
 }
 
 /* EXPERIENCE */
 
 .expContainer {
     width: auto;
-    height: 960px;
     background-image: url("bg.png");
     background-repeat: no-repeat;
 }
@@ -540,6 +579,73 @@ html:not([data-scroll='0']) .navflex {
     letter-spacing: 1px;
 }
 
+.expGridFlex {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.expGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#leftSideGrid {
+    padding-left: 200px;
+}
+
+#rightSideGrid {
+    padding-right: 230px;
+}
+
+#classes {
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+.expGrid > div {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.expGrid > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 240px;
+}
+
+.expGrid > div > div > p {
+    margin-top: 5px;
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    width: 400px;
+}
+
+.bottomGrid{
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+}
+
+.TLDRBigFlex {
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .sliderGrid {
     margin-top: 100px;
     position: absolute;
@@ -563,15 +669,13 @@ html:not([data-scroll='0']) .navflex {
     position: relative;
 }
 
-#rightArrow {
-    position: absolute;
-    top: -9px;
-    right: 1150px;
+.rightArrow {
+    margin-left: 100px;
     cursor: pointer;
     animation: caretBounce 1s infinite linear;
 }
 
-#rightArrow:hover {
+.rightArrow:hover {
     animation-play-state: paused;
 }
 
@@ -621,10 +725,13 @@ html:not([data-scroll='0']) .navflex {
 }
 
 .display {
+    margin-left: 100px;
     display: flex;
     position: relative;
     width: 900px;
     height: 500px;
+    opacity: 0;
+    transition: opacity 1.5s;
 }
 
 .display > div {
@@ -1307,6 +1414,8 @@ html:not([data-scroll='0']) .navflex {
 
 .rightDisplay {
     width: 900px;
+    transition: opacity 1.5s;
+    opacity: 0;
 }
 
 .rightDisplay > p{
@@ -1339,7 +1448,7 @@ html:not([data-scroll='0']) .navflex {
     margin-right: 100px;
     font-weight: 300;
     font-family: Roboto Slab, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .miniflex > a:hover {
@@ -1417,6 +1526,10 @@ html:not([data-scroll='0']) .navflex {
 /* PROJECTS */
 
 .projectContainer{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color:#fcfcfc;
     width: 100%;
 }
@@ -1451,6 +1564,7 @@ html:not([data-scroll='0']) .navflex {
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
 .shake{
@@ -1474,11 +1588,12 @@ html:not([data-scroll='0']) .navflex {
 }
 
 .project{
-    margin-left: 100px;
     padding-top: 100px;
     height: 250px;
     width: 400px;
     cursor: pointer;
+    transition: opacity 1.5s;
+    opacity: 0;
 }
 
 .project:hover{
@@ -1519,14 +1634,21 @@ html:not([data-scroll='0']) .navflex {
 .displayBox {
     z-index: 100;
     position: fixed;
-    top: 5em;
-    left: 36.5em;
+    top: 50px;
     height: 500px;
     width: 800px;
     background-color: white;
     animation: inAnimation 0.2s 1 ease-in-out;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+#displayBoxFlex {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .shadow{
@@ -1552,13 +1674,11 @@ html:not([data-scroll='0']) .navflex {
 
 @keyframes inAnimation {
     0%{
-        top: 0em;
-        left: 36.5em;
+        top: 0;
         opacity: 0.5;
     }
     100%{
-        top: 5em;
-        left: 36.5em;
+        top: 50px;
         opacity: 1;
     }
 }
@@ -1791,6 +1911,10 @@ a {
     text-align: center;
 }
 
+#tm {
+    margin-top: 10px;
+}
+
 .socialsFlex > p {
     color: #afafaf;
 }
@@ -1921,6 +2045,16 @@ a {
     opacity: 0;
 }
 
+.fullOpacity {
+    transition: opacity 1.5s;
+    opacity: 1;
+}
+
+.fullOpacityDelay{
+    transition: opacity 2.5s;
+    opacity: 1;
+}
+
 /* ANIMATIONS */
 
 .animateMail {
@@ -1977,4 +2111,466 @@ a {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+.spinImage1 {
+    animation: spinImage1 2s 1 ease-in-out;
+}
+
+@keyframes spinImage1 {
+    0%{
+        transform: rotate(0);
+    }
+    30%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.spinImage2 {
+    animation: spinImage2 2s 1 ease-in-out;
+}
+
+@keyframes spinImage2 {
+    0%{
+        transform: rotate(0);
+    }
+    40%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.spinImage3 {
+    animation: spinImage3 2s 1 ease-in-out;
+}
+
+@keyframes spinImage3 {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.moveTextRight {
+    animation: moveTextRight 1.5s 1 ease-in-out;
+}
+
+@keyframes moveTextRight {
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.moveTextLeft {
+    animation: moveTextLeft 1.5s 1 ease-in-out;
+}
+
+@keyframes moveTextLeft {
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.project1Opac{
+    animation: project1Opac 1.5s 1 linear;
+}
+
+@keyframes project1Opac {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.project2Opac{
+    animation: project2Opac 1.5s 1 linear;
+}
+
+@keyframes project2Opac {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.project3Opac{
+    animation: project3Opac 1.5s 1 linear;
+}
+
+@keyframes project3Opac {
+    0%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.project4Opac{
+    animation: project4Opac 1.5s 1 linear;
+}
+
+@keyframes project4Opac {
+    0%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.growButton{
+    animation: growButton 1.5s 1 ease-in-out;
+}
+
+@keyframes growButton {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.animateMailButton{
+    animation: animateMailButton 1.5s 1 ease-in-out;
+}
+
+@keyframes animateMailButton {
+    0%{
+        background-color: transparent;
+        transform: scale(1);
+    }
+    50%{
+        background-color: rgb(199, 199, 199);
+        transform: scale(1.1);
+    }
+    100%{
+        background-color: transparent;
+        transform: scale(1);
+    }
+}
+
+/* @MEDIA */
+
+@media screen and (max-width: 1300px){
+    .circle {
+        height: 140px;
+        width: 140px;
+    }
+
+    .circle > .img {
+        height: 40px;
+        width: 40px;
+    }
+    .desc > desc {
+        width: 300px;
+        font-size: 10px;
+        font-family: Roboto Slab, sans-serif;
+        line-height: 18px;
+    }
+    .goalsImageFlex {
+        height: 70px;
+    }
+
+    .bigFlexGoals{
+        padding-top: 0px;
+    }
+    
+    #industry {
+        padding-bottom: 10px;
+    }
+
+    #experience {
+        padding-bottom: 20px;
+    }
+
+    #career {
+        padding-bottom: 10px;
+    }
+
+    #titles > div > h4 {
+        margin-top: 40px;
+        font-size: 12px;
+        font-family: Roboto Slab, sans-serif;
+        font-weight: bold;
+    }
+
+    .goalsHeadingFlex > p {
+        font-size: 20px;
+    }
+
+    .aboutGrid > div > p{
+        font-size: 12px;
+    }
+
+    .present {
+        height: 50px;
+        width: 50px;
+    }
+
+    #aboutHeader {
+        font-size: 20px;
+    }
+
+    #pfpimage {
+        height: 120px;
+        width: 120px;
+    }
+
+    .expGrid > div > div{
+        margin: 0 90px;
+    }
+
+    #rightSideGrid {
+        margin-right: -50px;
+    }
+
+    .expGrid > div > div > p {
+        font-size: 16px;
+    }
+
+    .display {
+        transform: scale(.6);
+    }
+
+    #classes {
+        transform: scale(.65);
+        margin-left: -120px;
+    }
+
+    .miniflex > a {
+        font-size: 16px;
+    }
+
+    .border {
+        margin-left: -180px;
+    }
+
+    .expGrid > div {
+        margin-bottom: 0;
+    }
+
+    .expHeadingGrid {
+        transform: scale(.7);
+    }
+
+    #rightArrow {
+        margin-left: -60px;
+    }
+
+    .expGrid > div {
+        margin-bottom: -100px;
+    }
+
+    .expHeadingGrid {
+        margin-bottom: -50px;
+    }
+
+    #resumeButton {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    #resumeText {
+        font-size: 20px;
+    }
+
+    .expContainer {
+        margin-bottom: 150px;
+    }
+
+    .projectGrid {
+        transform: scale(.7);
+    }
+
+    .projectHeadingFlex {
+        transform: scale(.7);
+    }
+
+    #projHeadingText {
+        margin-bottom: -300px;
+    }
+
+    #contactGridWrap {
+        margin-top: -20px;
+    }
+
+    #displayBox {
+        transform: scale(.8);
+        top: 50px;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1600px){
+    .circle {
+        height: 160px;
+        width: 160px;
+    }
+
+    .circle > .img {
+        height: 50px;
+        width: 50px;
+    }
+    .desc > desc {
+        width: 400px;
+        font-size: 12px;
+        font-family: Roboto Slab, sans-serif;
+    }
+    .goalsImageFlex {
+        height: 100px;
+    }
+
+    .bigFlexGoals{
+        padding-top: 20px;
+    }
+    
+    #industry {
+        padding-bottom: 38px;
+    }
+
+    #experience {
+        padding-bottom: 15px;
+    }
+
+    #titles > div > h4 {
+        margin-top: 40px;
+        font-size: 14px;
+        font-family: Roboto Slab, sans-serif;
+        font-weight: bold;
+    }
+
+    .goalsHeadingFlex > p {
+        font-size: 30px;
+    }
+
+    .aboutGrid > div > p{
+        font-size: 14px;
+    }
+
+    .present {
+        height: 60px;
+        width: 60px;
+    }
+
+    #aboutHeader {
+        font-size: 22px;
+    }
+
+    #pfpimage {
+        height: 140px;
+        width: 140px;
+    }
+
+    .expGrid > div > div{
+        margin: 0 150px;
+    }
+
+    .expGrid > div > div > p {
+        font-size: 20px;
+    }
+
+    .display {
+        transform: scale(.8);
+    }
+
+    #classes {
+        transform: scale(.8);
+        margin-left: -60px;
+    }
+
+    .miniflex > a {
+        font-size: 16px;
+    }
+
+    .border {
+        margin-left: -100px;
+    }
+
+    .expGrid > div {
+        margin-bottom: 0;
+    }
+
+    .expHeadingGrid {
+        transform: scale(.8);
+    }
+
+    #rightSideGrid {
+        margin-left: 250px;
+    }
+
+    #rightArrow {
+        margin-left: -30px;
+    }
+
+    #resumeButton {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    #resumeText {
+        font-size: 22px;
+    }
+
+    .expContainer {
+        margin-bottom: 100px;
+    }
+
+    .projectGrid {
+        transform: scale(.8);
+    }
+
+    .projectHeadingFlex {
+        transform: scale(.8);
+    }
+
+    #projHeadingText {
+        margin-bottom: -200px;
+    }
+
+    #contactGridWrap {
+        margin-top: 0px;
+    }
+
+    #displayBox {
+        transform: scale(.9);
+        top: 50px;
+    }
+
 }

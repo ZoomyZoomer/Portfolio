@@ -45,7 +45,7 @@ function Footer() {
 
         </div>
         <div id="tm" className="socialsFlex">
-            <p>&#174; Kamil Wisniewski 2024</p>
+            <p>Made in Reactjs and designed in Figma <br></br><br></br> &#174; Kamil Wisniewski 2024</p>
         </div>
     </section>
   )
