@@ -2305,6 +2305,7 @@ a {
         font-family: Roboto Slab, sans-serif;
         line-height: 18px;
     }
+
     .goalsImageFlex {
         height: 70px;
     }
@@ -2314,7 +2315,7 @@ a {
     }
     
     #industry {
-        padding-bottom: 10px;
+        padding-bottom: 8px;
     }
 
     #experience {
@@ -2325,7 +2326,7 @@ a {
         padding-bottom: 10px;
     }
 
-    #titles > div > h4 {
+    #titles > div > h4, #titles2 > div > h4, #titles3 > div > h4 {
         margin-top: 40px;
         font-size: 12px;
         font-family: Roboto Slab, sans-serif;
@@ -2462,14 +2463,14 @@ a {
     }
     
     #industry {
-        padding-bottom: 38px;
+        padding-bottom: 35px;
     }
 
     #experience {
-        padding-bottom: 15px;
+        padding-bottom: 13px;
     }
 
-    #titles > div > h4 {
+    #titles > div > h4, #titles2 > div > h4, #titles3 > div > h4 {
         margin-top: 40px;
         font-size: 14px;
         font-family: Roboto Slab, sans-serif;

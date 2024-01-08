@@ -26,9 +26,9 @@ function App() {
         </div>
       <a id="Projects"></a>
         <Projects />
-      <a id="Contact"></a>
         <Contact />
         <Footer />
+        <a id="Contact"></a>
     
   </div>
 
