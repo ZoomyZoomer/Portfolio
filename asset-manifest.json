@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/react-gh-pages/static/js/main.4047378d.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.4047378d.js.map": "/react-gh-pages/static/js/main.4047378d.js.map"
+    "main.js": "/Portfolio/static/js/main.4047378d.js",
+    "index.html": "/Portfolio/index.html",
+    "main.4047378d.js.map": "/Portfolio/static/js/main.4047378d.js.map"
   },
   "entrypoints": [
     "static/js/main.4047378d.js"
