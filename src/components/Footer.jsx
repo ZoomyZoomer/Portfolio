@@ -33,11 +33,12 @@ function Footer() {
                 <a href="https://github.com/ZoomyZoomer"><img src="github.svg"></img></a>
              </div>
              <div id ="dc" onMouseEnter={() => showDiscord()} onMouseLeave={() => hideDiscord()} className="iconBlock">
+                <div id="discord" className={"discordInfo" + " " + "zeroOpacity"}>
+                    <p>wholemilky</p>
+                </div>
                 <a><img src="discord.svg"></img></a>
              </div>
-             <div id="discord" className={"discordInfo" + " " + "zeroOpacity"}>
-                <p>wholemilky</p>
-             </div>
+             
              <a href="#Home"><FontAwesomeIcon id="totop" icon={faCaretUp} size="2xl"/></a>
              
              

@@ -5,6 +5,7 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow-x: visible;
 }
 
 body {
@@ -97,15 +98,18 @@ main{
 
 /* ********Navbar******** */
 
+.lightUpNav{
+    background-color: #bebebe;
+}
+
 .nav_wrapper {
     position: relative;
 }
 
-
 html:not([data-scroll='0']) .navflex {
     background-color: #222;
     position: fixed;
-    width: 100%;
+    width: 99.5%;
     top: 0;
     z-index: 100;
     height: 60px;
@@ -149,7 +153,7 @@ html:not([data-scroll='0']) .navflex {
     padding-top: 5px;
 }
 
-.navleftflex > a, .navrightflex > a {
+.navleftflex > a, .navrightflex div > a {
     padding-left: 10px;
     color: rgb(238, 238, 238);
     font-family: Lato;
@@ -172,19 +176,17 @@ html:not([data-scroll='0']) .navflex {
     margin-right: auto;
     display: flex;
     background-color: transparent;
+    justify-content: center;
+    text-align: center;
     align-items: center;
-    margin-left: -30px;
 }
 
-.navrightflex > img {
-    padding-left: 30px;
-    height: 20px;
-    padding-top: 2px;
-    cursor: pointer;
-}
-
-.navrightflex > a {
-    padding-left: 30px;
+.navrightflex > div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 10px;
 }
 
 .navflex {
@@ -2031,13 +2033,16 @@ a {
     position: absolute;
     text-align: center;
     align-items: center;
-    left: 967px;
-    bottom: 58px;
+    bottom: 50px;
     transition: opacity 0.5s;
 }
 
 .discordInfo > p {
     color: rgb(121, 121, 121);
+}
+
+#dc {
+    position: relative;
 }
 
 .zeroOpacity {

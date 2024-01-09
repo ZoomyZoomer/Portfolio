@@ -10,7 +10,7 @@ function Navbar() {
 
         <div className="nav_wrapper">
 
-            <section className="navflex">
+            <section id="navflex" className="navflex">
                 
                 <div className="navleftflex">
                     <FontAwesomeIcon id="img" icon={faHatWizard} size = '4x' color = '#EEEEEE'/>
@@ -22,11 +22,27 @@ function Navbar() {
                 </div>
 
                 <div className="navrightflex">
-                    <a id="navAbout" href="#About">ABOUT</a>
-                    <a id="navGoals" href="#Goals">GOALS</a>
-                    <a id="navExperience" href="#Experience">EXPERIENCE</a>
-                    <a id="navProjects" href="#Projects">PROJECTS</a>
-                    <a id="navContact" href="#Contact">CONTACT</a>
+
+                    <div id="aboutBlock">
+                        <a id="navAbout" href="#About">ABOUT</a>
+                    </div>
+                    <div id="goalsBlock">
+                        <a id="navGoals" href="#Goals">GOALS</a>
+                    </div>
+                    <div id="experienceBlock">
+                        <a id="navExperience" href="#Experience">EXPERIENCE</a>
+                    </div>
+                    <div id="projectsBlock">
+                        <a id="navProjects" href="#Projects">PROJECTS</a>
+                    </div>
+                    <div id="contactBlock">
+                         <a id="navContact" href="#Contact">CONTACT</a>
+                    </div>
+                    
+                    
+                    
+                    
+                    
                 </div>
                 
             </section>

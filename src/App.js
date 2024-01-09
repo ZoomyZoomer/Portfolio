@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import MainContent from './components/MainContent'
 import Navbar from './components/Navbar'
 import About from './components/About'
@@ -10,8 +10,10 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
+  
   return (
 <div>
+      <a id="Base"></a>
     <div id="entireContainer">
       <a id="Home"></a>
         <Navbar />

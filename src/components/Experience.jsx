@@ -21,7 +21,7 @@ function Experience() {
 
     var child1 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/HTML"}, React.createElement("img", {id:"circle1Image", className:"grayscale", src:"html_logo.png"}));
     var child2 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/JavaScript"}, React.createElement("img", {id:"circle2Image", className:"grayscale", src:"javascript_logo.png"}));
-    var child3 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/C_(programming_language)"}, React.createElement("img", {id:"circle3Image", className:"grayscale", src:"c_logo.png"}));
+    var child3 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/C_(programming_language)"}, React.createElement("img", {id:"circle3Image", className:"grayscale", src:"C_logo.png"}));
     var child4 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/CSS"}, React.createElement("img", {id:"circle4Image", className:"grayscale", src:"css_logo.png"}));
     var child5 = React.createElement("a", {href: "https://en.wikipedia.org/wiki/Java_(programming_language)"}, React.createElement("img", {id:"circle5Image", className:"grayscale", src:"java_logo.png"}));
 
