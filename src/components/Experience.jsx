@@ -124,7 +124,7 @@ function Experience() {
                 setText(prevText => "LANGUAGES");
                 setImg1(prevImg1 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/HTML"}, React.createElement("img", {id:"circle1Image", className:"grayscale", src:"html_logo.png"})));
                 setImg2(prevImg2 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/JavaScript"}, React.createElement("img", {id:"circle2Image", className:"grayscale", src:"javascript_logo.png"})));
-                setImg3(prevImg3 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/C_(programming_language)"}, React.createElement("img", {id:"circle3Image", className:"grayscale", src:"c_logo.png"})));
+                setImg3(prevImg3 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/C_(programming_language)"}, React.createElement("img", {id:"circle3Image", className:"grayscale", src:"C_logo.png"})));
                 setImg4(prevImg4 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/CSS"}, React.createElement("img", {id:"circle4Image", className:"grayscale", src:"css_logo.png"})));
                 setImg5(prevImg5 => React.createElement("a", {href: "https://en.wikipedia.org/wiki/Java_(programming_language)"}, React.createElement("img", {id:"circle5Image", className:"grayscale", src:"java_logo.png"})));
                 circle1.classList.remove("circle1-2");
