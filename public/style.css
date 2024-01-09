@@ -547,6 +547,7 @@ html:not([data-scroll='0']) .navflex {
 /* EXPERIENCE */
 
 .expContainer {
+    margin-top: 150px;
     width: auto;
     background-image: url("bg.png");
     background-repeat: no-repeat;
