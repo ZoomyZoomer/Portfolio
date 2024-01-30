@@ -58,7 +58,7 @@ function Contact() {
             <h6>I'm always looking for internship opportunities <br></br> and projects to work on!</h6>
         </div>
         <div className="contactFlex">
-            <a href="mailto: realisticallyspeaking101@gmail.com"><button id="mailButton">Say Hi</button></a>
+            <a href="mailto: kcw90@scarletmail.rutgers.edu"><button id="mailButton">Say Hi</button></a>
         </div>
     </section>
   )
