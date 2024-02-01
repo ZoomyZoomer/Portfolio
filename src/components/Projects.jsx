@@ -248,7 +248,7 @@ function Projects() {
       (currProj == "BM" ? <Display {...BMProps}/> :
       currProj == "LS" ? <Display {...LSProps}/> :
       currProj == "DFS" ? <Display {...DFSProps}/> :
-      currProj = "PF" ? <Display {...PFProps}/> :
+      currProj == "PF" ? <Display {...PFProps}/> :
       <Display {...OBPProps}/>)}
     <section id="projectContainer" className="projectContainer">
         <div id="projHeadingText">
