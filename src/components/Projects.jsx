@@ -130,7 +130,7 @@ function Projects() {
   let PFProps = {
     title: "Pathfinder",
     subTitle: "Reactjs Program",
-    description: [<a>Algorithms</a>, " are a powerful tool the realm of computer science, enabling us programmers to find the most efficient solutions possible whilst taking space and runtime into consideration."],
+    description: [<a href="https://en.wikipedia.org/wiki/Algorithm">Algorithms</a>, " are a powerful tool the realm of computer science, enabling us programmers to find the most efficient solutions possible whilst taking space and runtime into consideration."],
     description2: "Seeing the importance of algorithms, I wanted to create way that would visualize some of the most popular search algorithms through the use of an interactive interface.",
     description3: "The purpose of this project was to create a visual environment for some popular search algorithms such as BFS, DFS, and A*. I made the project interactive through the use of Reactjs by allowing the user to drag Start and End nodes, as well as the ability to create 'blocked' nodes that prevent search movement.",
     tag1: "Javascript",
@@ -140,6 +140,19 @@ function Projects() {
     ReadMe: [<a href="https://zoomyzoomer.github.io/pathfinder/"><button>WEBSITE</button></a>],
     GitRepository: ["OR ", <a href="https://github.com/ZoomyZoomer/pathfinder"><button>GIT REPOSITORY</button></a>],
     function: setShowDis
+  }
+
+  let OBPProps = {
+    title: "OneBitePages",
+    subTitle: "MERN Stack Program",
+    description: ["This program was created using the ", <a href="https://www.geeksforgeeks.org/mern-stack/">MERN Stack</a>, ", utilizing MongoDB for database management, Express for server-side routing, React for front-end UI, and Node for server-side scripting."],
+    description2: "I implemented a user authentication system that is mounted with an encryption model, enalbing users to safely register, login, and edit their own public posts!",
+    description3: "I had also optimized communication channels through efficient network requests to their respective endpoints, ensuring seamless data exchange.",
+    tag1: "MongoDB",
+    tag2: "Express",
+    tag3: "React",
+    tag4: "Node",
+    GitRepository: [<a href="https://github.com/ZoomyZoomer/OneBitePages">GIT REPOSITORY</a>]
   }
 
   useEffect(() => {
@@ -212,6 +225,8 @@ function Projects() {
         if (entry.isIntersecting) {
           document.getElementById("project4").classList.add("project4Opac"); 
           document.getElementById("project4").classList.add("fullOpacity"); 
+          document.getElementById("project5").classList.add("project4Opac"); 
+          document.getElementById("project5").classList.add("fullOpacity"); 
         }
       });
     });
@@ -233,7 +248,8 @@ function Projects() {
       (currProj == "BM" ? <Display {...BMProps}/> :
       currProj == "LS" ? <Display {...LSProps}/> :
       currProj == "DFS" ? <Display {...DFSProps}/> :
-      <Display {...PFProps}/> ) }
+      currProj = "PF" ? <Display {...PFProps}/> :
+      <Display> {...OBPProps}</Display>)}
     <section id="projectContainer" className="projectContainer">
         <div id="projHeadingText">
           <div className="projectHeadingFlex">
@@ -257,7 +273,9 @@ function Projects() {
                 <img src="coding2_icon.png"></img>
                 <h1>Directory Scanner</h1>
             </div>
-            <div className="projectTemp"> 
+            <div id="project5" onClick={() => {setShowDis(true); setProj("OBP");}} className="project">
+                <img src="bracket_icon.png"></img>
+                <h1>OneBitePages</h1>
             </div>
             <div id="project4" onClick={() => {setShowDis(true); setProj("PF");}} className="project">
                 <img src="bracket_icon.png"></img>
