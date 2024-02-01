@@ -249,7 +249,7 @@ function Projects() {
       currProj == "LS" ? <Display {...LSProps}/> :
       currProj == "DFS" ? <Display {...DFSProps}/> :
       currProj = "PF" ? <Display {...PFProps}/> :
-      <Display> {...OBPProps}</Display>)}
+      <Display {...OBPProps}/>)}
     <section id="projectContainer" className="projectContainer">
         <div id="projHeadingText">
           <div className="projectHeadingFlex">
