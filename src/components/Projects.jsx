@@ -152,7 +152,8 @@ function Projects() {
     tag2: "Express",
     tag3: "React",
     tag4: "Node",
-    GitRepository: [<a href="https://github.com/ZoomyZoomer/OneBitePages">GIT REPOSITORY</a>]
+    GitRepository: [<a href="https://github.com/ZoomyZoomer/OneBitePages">GIT REPOSITORY</a>],
+    function: setShowDis
   }
 
   useEffect(() => {
